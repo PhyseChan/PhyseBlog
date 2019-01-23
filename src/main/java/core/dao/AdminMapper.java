@@ -1,0 +1,20 @@
+package core.dao;
+
+import java.util.List;
+import core.bean.Admin;
+import org.springframework.stereotype.Repository;
+
+@Repository("AdminMapper")
+public interface AdminMapper {
+
+    int deleteByPrimaryKey(Integer id);
+
+    int insert(Admin record);
+
+    Admin selectByPrimaryKey(Integer id);
+
+    List<Admin> selectAll();
+
+    int updateByPrimaryKey(Admin record);
+
+}
