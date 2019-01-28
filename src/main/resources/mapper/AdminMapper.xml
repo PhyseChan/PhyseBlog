@@ -55,4 +55,7 @@
     select id, adminname, adminpassword
     from admin
   </select>
+  <select id="getUserByName" resultType="core.bean.Admin">
+    select * from admin where adminname=#{username}
+  </select>
 </mapper>

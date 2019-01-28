@@ -19,8 +19,14 @@ public class EditorController {
     Blog blog;
     @RequestMapping(value = "hello.action",produces = "application/json;charset=UTF-8")
     public @ResponseBody String getEditorInfo(HttpServletRequest request, @RequestBody Blog blog){
-        System.out.println("==========================================>"+blog.getTitle()+blog.getSummary()+blog.getContext());
         blogService.inserBlog(blog);
         return "success";
     }
+    public @ResponseBody String getBlogByPage(HttpServletRequest request ,int page){
+        blogService.getBlogByPage(page,5);
+        return "success";
+    }
+
+    
+
 }

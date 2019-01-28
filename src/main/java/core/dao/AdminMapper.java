@@ -2,6 +2,7 @@ package core.dao;
 
 import java.util.List;
 import core.bean.Admin;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository("AdminMapper")
@@ -16,5 +17,7 @@ public interface AdminMapper {
     List<Admin> selectAll();
 
     int updateByPrimaryKey(Admin record);
+
+    Admin getUserByName(@Param("username") String username);
 
 }
