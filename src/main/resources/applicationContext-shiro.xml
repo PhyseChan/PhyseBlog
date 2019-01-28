@@ -47,6 +47,11 @@
         </property>
     </bean>
 
+    <bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+        <property name="sessionIdUrlRewritingEnabled" value="false" />
+        <property name="globalSessionTimeout" value="3600000" />
+    </bean>
+
     <!-- 用户授权信息Cache -->
     <bean id="cacheManager" class="org.apache.shiro.cache.MemoryConstrainedCacheManager" />
 
