@@ -4,6 +4,7 @@ import core.bean.Blog;
 import core.service.serviceImpl.AdminServiceImpl;
 import core.service.serviceImpl.BlogServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,11 +23,5 @@ public class EditorController {
         blogService.inserBlog(blog);
         return "success";
     }
-    public @ResponseBody String getBlogByPage(HttpServletRequest request ,int page){
-        blogService.getBlogByPage(page,5);
-        return "success";
-    }
-
-    
 
 }

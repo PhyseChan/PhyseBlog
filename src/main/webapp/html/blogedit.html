@@ -3,30 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
+    <script type="text/javascript" src="/resources/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/resources/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/bootstrap-grid.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/bootstrap-reboot.css" type="text/css">
 </head>
 <body>
-    <script type="text/javascript">
-        function requestJson() {
-            $.ajax({
-                type : "post",
-                url : "/hello.action",
-                contentType : "application/json;charset=utf-8",
-                data : '{"title":"水杯", "context":"12312321321321321312321321312321312"}',
-                success : function(data) {
-                    alert(data.title);
-                }
-            });
-        }
-    </script>
-    <textarea name="content" id="editor" id="textarea"></textarea>
-    <input type="button" value="确认" onclick="requestJson()">
-    <script>
-        ClassicEditor
-            .create( document.querySelector('#editor'))
-            .catch( error=>{console.error(error);});
-    </script>
-hello
+<div class="container-fluid">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+</div>
 </body>
 </html>

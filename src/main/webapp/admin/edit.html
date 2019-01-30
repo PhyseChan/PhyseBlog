@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>editpage</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
 </head>
 <body>
-        this is editpage!!!!
+<div style="width: 55%;height: 300px">
+<textarea name="content" id="editor" id="textarea"></textarea>
+<input type="button" value="确认" onclick="requestJson()">
+<script>
+    ClassicEditor
+        .create( document.querySelector('#editor'))
+        .catch( error=>{console.error(error);});
+</script>
+</div>
+hello
 </body>
 </html>
