@@ -2,6 +2,7 @@ package core.dao;
 
 import java.util.List;
 import core.bean.Admin;
+import core.bean.Blog;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -19,5 +20,7 @@ public interface AdminMapper {
     int updateByPrimaryKey(Admin record);
 
     Admin getUserByName(@Param("username") String username);
+
+    int insertBlog(Blog blog);
 
 }

@@ -15,7 +15,7 @@
     <!--配置视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/"></property>
-        <property name="suffix" value=".html"></property>
+        <property name="suffix" value=""></property>
     </bean>
 
     <!--标准配置-->
@@ -24,6 +24,10 @@
 
     <import resource="classpath:applicationContext.xml"></import>
     <import resource="classpath:applicationContext-shiro.xml"></import>
+
+    <mvc:resources mapping="/resources/**" location="/resources/" cache-period="2592000"/>
+    <mvc:resources mapping="/resources/VerticalTimeline/css/" location="/resources/VerticalTimeline/css/" />
+
 
     <!--<aop:config proxy-target-class="true"></aop:config>-->
     <!--<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">-->

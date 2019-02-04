@@ -6,6 +6,9 @@ html,body,header,footer,div,section{
     padding:0;
     margin:0;
 }
+body{
+    background-color: #f6f6f6;
+}
 .clearfix:after{
     content:'';
     display:block;
@@ -17,7 +20,7 @@ html,body,header,footer,div,section{
     zoom:1;
 }
 .sec-wrapper{
-    min-height:100%;
+    min-height:60%;
 }
 .head-top{
     width:100%;
@@ -34,22 +37,22 @@ html,body,header,footer,div,section{
 }
 .foot{
     width:100%;
-    height:100px;
-    line-height:100px;
+    height:10px;
+    line-height:10px;
     text-align:center;
     font-size:16px;
-    color:#fff;
-    background:#528FEA;
+    color:#f6f6f6;
+    background:#f6f6f6;
     margin-top:-100px;
 }
 .div-wrapper{
-    width:1200px;
+    width:1070px;
     margin:0 auto;
-    background:#F4F6F9;
+    background: #f6f6f6;
     position:relative;
 }
 .cont-left{
-    width:900px;
+    width:800px;
     float:left;
     margin-right:10px;
 }
@@ -59,18 +62,26 @@ html,body,header,footer,div,section{
 .cont-item{
     width:100%;
     height:200px;
-    background:tan;
-    margin-top:10px;
+    background:#ffffff;
+    margin-top:25px;
+    margin-left:60px;
+    border-radius:5px;
 }
 .box-fixed{
-    width:290px;
-    height:600px;
+    width:100px;
+    height:280px;
     padding-top:20px;
-    background-color:#89A1C5;
+    background-color:#f6f6f6;
     position:relative;
     top:0px;
     text-align:center;
-    color:#fff;
+    color:#686a6e;
+    border-radius:5px;
+    border-style:solid;
+    border-color: #f6f6f6;
+    border-left-color:#b9bbbe;
+    border-left-width: 1px;
+    margin-left: 70px;
 }
 .tab_fix_bottom {
     position: absolute;
@@ -79,4 +90,44 @@ html,body,header,footer,div,section{
 }
 .tab_fix{
     position:fixed;
+}
+.f-nav {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9989;
+    position: fixed;
+}
+.detail_button{
+    width: 100px;
+    height: 80px;
+    margin-top:60px;
+    float: right;
+}
+.title_and_summary{
+    float: left;
+    height: 180px;
+    width:700px;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.blog_date{
+    padding-top: 3px;
+    bottom: 0;
+}
+a:hover{text-decoration:none}
+
+.two_s{
+    -moz-box-shadow:1px 1px 3px #d3d9df;
+    -webkit-box-shadow:1px 1px 3px #d3d9df;
+    box-shadow:1px 1px 3px #d3d9df;
+}
+.summaryandimg{
+    float: left;
+
+}
+.summary-style{
+    margin-top: 20px;
+    margin-left: 20px;
 }

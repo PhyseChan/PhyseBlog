@@ -18,4 +18,6 @@ public interface BlogMapper {
     int updateByPrimaryKey(Blog record);
 
     List<Blog> selectBlogBypage();
+
+
 }

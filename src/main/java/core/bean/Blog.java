@@ -2,6 +2,8 @@ package core.bean;
 
 import org.springframework.stereotype.Repository;
 
+import java.sql.Date;
+
 @Repository("Blog")
 public class Blog {
 
@@ -19,7 +21,26 @@ public class Blog {
 
     private Category category;
 
-    private String imageUrl;
+    private String imageurl;
+
+    public String getimageurl() {
+        return imageurl;
+    }
+
+    public void setimageurl(String imageurl) {
+        this.imageurl = imageurl;
+    }
+
+    public Date getPublishtime() {
+        return publishtime;
+    }
+
+    public void setPublishtime(Date publishtime) {
+        this.publishtime = publishtime;
+    }
+
+    private Date publishtime;
+
 
     public int getBid() {
         return bid;

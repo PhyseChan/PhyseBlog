@@ -3,19 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>editpage</title>
-    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
+    <script type="text/javascript" src="/resources/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/resources/js/myajax.js"></script>
 </head>
 <body>
-<div style="width: 55%;height: 300px">
-<textarea name="content" id="editor" id="textarea"></textarea>
-<input type="button" value="确认" onclick="requestJson()">
+
+    <div id="editor">
+    </div>
+    <style>
+        .w-e-text-container {
+            height: 600px !important;
+        }
+    </style>
+    <!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+    <script type="text/javascript" src="/resources/wangEditor/release/wangEditor.min.js"></script>
+    <script type="text/javascript">
+        var E = window.wangEditor
+        var editor = new E('#editor')
+        // 或者 var editor = new E( document.getElementById('editor') )
+        editor.customConfig.uploadImgServer = '/admin/uploadimage'
+        editor.customConfig.zIndex = 300
+        editor.customConfig.uploadImgHooks = {
+            before : function(xhr, editor, files) {
+
+            },
+            success : function(xhr, editor, result) {
+                console.log("上传成功");
+            },
+            fail : function(xhr, editor, result) {
+                console.log(xhr)
+                console.log("上传失败,原因是"+result);
+            },
+            error : function(xhr, editor) {
+                console.log("上传出错");
+            },
+            timeout : function(xhr, editor) {
+                console.log("上传超时");
+            }
+        }
+        editor.create()
+    </script>
+
+<input type="button" value="提交" onclick="uploadcontext()">
 <script>
-    ClassicEditor
-        .create( document.querySelector('#editor'))
-        .catch( error=>{console.error(error);});
+
 </script>
-</div>
-hello
 </body>
 </html>

@@ -27,7 +27,7 @@ public class BlogVo {
 
     private Category category;
 
-    private String imageUrl;
+    private String imageurl;
 
     public int getBid() {
         return bid;

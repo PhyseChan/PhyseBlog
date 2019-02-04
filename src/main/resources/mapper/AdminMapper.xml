@@ -58,4 +58,6 @@
   <select id="getUserByName" resultType="core.bean.Admin">
     select * from admin where adminname=#{username}
   </select>
+
+
 </mapper>
