@@ -67,6 +67,9 @@ body{
     margin-left:60px;
     border-radius:5px;
 }
+.bcont-item{
+
+}
 .box-fixed{
     width:100px;
     height:280px;
@@ -131,3 +134,5 @@ a:hover{text-decoration:none}
     margin-top: 20px;
     margin-left: 20px;
 }
+
+

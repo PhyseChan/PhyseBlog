@@ -65,17 +65,17 @@ To change this template use File | Settings | File Templates.
                             </div>
 
                             <div class="detail_button">
-                                <a href="/blog/index" class="hvr-border-fade">阅读</a>
+                                <a href="/blog/getBlogByid?bid=${blogd.bid}" class="hvr-border-fade">阅读</a>
                             </div>
                         </div>
-                        <nav >${blogd.publishtime}</nav>
+                        <div >${blogd.publishtime}</div>
                     </div>
                 </c:forEach>
 
 
             </div>
             <div class="list-right">
-                <div class="box-fixed "><div><a href="/blog/index">主页</a></div><div><a href="/blog/index">主页</a></div><div><a href="/blog/index">主页</a></div></div>
+                <div class="box-fixed "><div><a href="/blog/index">主页</a></div>分类<div><a href="#">类别1</a></div><div><a href="#">类别2</a></div></div>
             </div>
         </div>
     </section>

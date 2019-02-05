@@ -51,8 +51,8 @@
     <div class="container2 ">
         <div class="drag">
         <span class="logo-lg">
-          <h1 class="headtitle">PhyseのBlog</h1>    
-          <p>jean 唔 jean ？</p>
+          <h1 class="headtitle"></h1>    
+          <p></p>
         </span>
         </div>
     </div>

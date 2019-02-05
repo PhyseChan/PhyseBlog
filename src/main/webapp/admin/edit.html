@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>editpage</title>
+    <link rel="stylesheet" href="/resources/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/bootstrap-grid.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/bootstrap-reboot.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/core.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/resources/css/font.css" type="text/css">
+
     <script type="text/javascript" src="/resources/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/resources/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/resources/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="/resources/js/core.js"></script>
+    <script type="text/javascript" src="/resources/garand-sticky/jquerysticky.js"></script>
     <script type="text/javascript" src="/resources/js/myajax.js"></script>
 </head>
 <body>
-
-    <div id="editor">
+    <div class="div-wrapper clearfix">
+        <div id="editor">
+        </div>
+        <input type="button" value="提交" onclick="uploadcontext()">
     </div>
     <style>
         .w-e-text-container {
@@ -44,7 +57,7 @@
         editor.create()
     </script>
 
-<input type="button" value="提交" onclick="uploadcontext()">
+
 <script>
 
 </script>

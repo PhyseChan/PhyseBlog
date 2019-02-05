@@ -11,8 +11,44 @@
 <html>
 <head>
     <title>Title</title>
+
+    <link rel="stylesheet" href="/resources/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/bootstrap-grid.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/bootstrap-reboot.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/core.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/resources/css/font.css" type="text/css">
+
+    <script type="text/javascript" src="/resources/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/resources/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/resources/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="/resources/js/core.js"></script>
+    <script type="text/javascript" src="/resources/garand-sticky/jquerysticky.js"></script>
+    <script type="text/javascript" src="/resources/js/myajax.js"></script>
+    <link href="/resources/buttonAction/css/demo-page.css" rel="stylesheet" media="all">
+    <link href="/resources/buttonAction/css/hover.css" rel="stylesheet" media="all">
 </head>
 <body>
+<script>
+    $(document).ready(function(){
+        $("#sticker").sticky({topSpacing:0});
+    });
+</script>
+<section class="sec-wrapper">
 
+    <section class="main-section">
+        <div class="div-wrapper clearfix">
+            <div class="cont-left">
+                <h2>${blog.title}</h2>
+                ${blog.publishtime}
+                ${blog.context}
+
+            </div>
+            <div class="list-right">
+                <div class="box-fixed "><div><a href="/blog/index">主页</a></div>分类<div><a href="#">类别1</a></div><div><a href="#">类别2</a></div></div>
+            </div>
+        </div>
+    </section>
+</section>
 </body>
 </html>
