@@ -84,6 +84,12 @@
   <select id="selectBlogBypage" resultMap="selectByPage">
     select *
     from blog b
-    LEFT JOIN category c on b.categoryid=c.cid
+    LEFT JOIN category c on b.categoryid=c.cid order BY b.publishtime desc
+  </select>
+
+  <select id="selectBlogByCategory" resultMap="BaseResultMap">
+    select *
+    from blog b
+    LEFT JOIN category c on b.categoryid=c.cid where c.cid=#{cid,jdbcType=INTEGER}
   </select>
 </mapper>

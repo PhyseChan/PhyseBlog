@@ -43,6 +43,7 @@
                 /blog/** = anon
                 /resources/** = anon
                 /resources/wangEditor/** = anon
+                /avana/** = anon
                 /resources/VerticalTimeline/** =anon
                 /resources/jQuery-spqh/js/** = anon
                 /resources/jQuery-spqh/css/** = anon

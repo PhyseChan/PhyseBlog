@@ -20,10 +20,9 @@ public class IndexController {
     @Autowired
     BlogServiceImpl blogService;
 
-    @RequestMapping("/blog/blogPage")
+    @RequestMapping("/blog/index")
     public ModelAndView initIndex(HttpServletRequest httpServletRequest){
         String pageString=httpServletRequest.getParameter("page");
-        System.out.println(pageString);
         ModelAndView mav=new ModelAndView();
         Integer page;
         if(StringUtils.isEmpty(pageString)){
@@ -31,17 +30,18 @@ public class IndexController {
         }else{
             page=Integer.parseInt(pageString);
         }
-        List<Blog> bloglist=blogService.getBlogByPage(page,10);
-        PageInfo<Blog> pageinfo=new PageInfo<Blog>(bloglist);
-        mav.addObject("bloglist",bloglist);
+        List<Blog> bloglist1=blogService.getBlogByPage(page,5);
+        List<Blog> bloglist2=blogService.getBlogByPage(2,5);
+        mav.addObject("bloglist1",bloglist1);
+        mav.addObject("bloglist2",bloglist2);
         mav.addObject("page",page);
-        mav.setViewName("blog/blogPage.jsp");
+        mav.setViewName("blog/index.jsp");
         return mav;
     }
-    @RequestMapping("/blog/index")
+/*    @RequestMapping("/blog/index")
     public ModelAndView goindex(HttpServletRequest request){
         ModelAndView model=new ModelAndView();
         model.setViewName("blog/index.jsp");
         return model;
-    }
+    }*/
 }

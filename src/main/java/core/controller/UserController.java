@@ -17,7 +17,6 @@ public class UserController {
     public String login (HttpServletRequest request){
         String name=request.getParameter("username");
         String pwd=request.getParameter("password");
-        System.out.println("------------->"+name+pwd);
         boolean flag=userService.login(name,pwd);
         if (flag==true){
             return "blog/index.html";

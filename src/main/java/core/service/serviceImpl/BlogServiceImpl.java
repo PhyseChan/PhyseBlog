@@ -36,5 +36,9 @@ public class BlogServiceImpl {
         return blogMapper.selectByPrimaryKey(id);
     }
 
+    public List<Blog> getBlogByCategory(int cid){
+        return blogMapper.selectBlogByCategory(cid);
+    }
+
 
 }

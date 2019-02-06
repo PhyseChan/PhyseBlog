@@ -19,5 +19,7 @@ public interface BlogMapper {
 
     List<Blog> selectBlogBypage();
 
+    List<Blog> selectBlogByCategory(int cid);
+
 
 }
