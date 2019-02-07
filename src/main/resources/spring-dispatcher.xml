@@ -26,7 +26,7 @@
     <import resource="classpath:applicationContext-shiro.xml"></import>
 
     <mvc:resources mapping="/resources/**" location="/resources/" cache-period="2592000"/>
-    <mvc:resources mapping="/resources/VerticalTimeline/css/" location="/resources/VerticalTimeline/css/" />
+
 
 
     <!--<aop:config proxy-target-class="true"></aop:config>-->

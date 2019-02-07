@@ -33,7 +33,7 @@ public class BlogContoller {
         Integer bid=Integer.parseInt(idstring);
         Blog blog=blogService.selectBlogById(bid);
         mav.addObject("blog",blog);
-        mav.setViewName("/blog/blogcontext.jsp");
+        mav.setViewName("/blog/blog-details.jsp");
         return mav;
     }
 
