@@ -11,25 +11,16 @@
 
 <!DOCTYPE HTML>
 <html>
+
 <head>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
     <meta charset="utf-8">
 
     <!-- Description, Keywords and Author -->
 
     <meta name="description" content="">
-
     <meta name="author" content="">
-
-
-
-    <title>:: avana LLC | Blog ::</title>
-
-    <link rel="shortcut icon" href="/resources/images/favicon2.ico" type="image/x-icon">
-
-
+    <title>『 Physe Blog 』</title>
 
     <!-- style -->
 
@@ -47,18 +38,14 @@
 
     <!-- font-awesome -->
 
-    <link href="/resources/css/fonts.css" rel="stylesheet" type="text/css">
-
     <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
 
     <!-- font-awesome -->
 
+    <link href="/resources/css/effects/set2.css" rel="stylesheet" type="text/css">
     <link href="/resources/css/effects/normalize.css" rel="stylesheet" type="text/css">
-
     <link href="/resources/css/effects/component.css"  rel="stylesheet" type="text/css" >
-
 </head>
-
 
 
 <body>
@@ -68,37 +55,33 @@
 <!-- header -->
 
 <header role="header">
-
     <div class="container">
 
         <!-- logo -->
 
-        <h1>
-
-            <a href="index.html" title="avana LLC"><img src="/resources/images/favicon-large.ico" title="avana LLC" alt="avana LLC"/></a>
-
-        </h1>
+        <h1> <a href="index.html" title="Physe"><img src="/resources/images/favicon-large.ico" title="Physe" alt="Physe"/></a> </h1>
 
         <!-- logo -->
 
         <!-- nav -->
 
+
         <nav role="header-nav" class="navy">
             <ul>
-                <li class="nav-active"><a href="index.html" title="Work">首页</a></li>
+                <li class="nav-active"><a href="/blog/index" title="Work">首页</a></li>
                 <li><a href="about.html" title="About">关于</a></li>
-                <li><a href="webDevelopment.html" title="web development">web开发</a></li>
-                <li><a href="408.html" title="computer science">408综合</a></li>
-                <li><a href="mathematics.html" title="higher mathematics & linear algebra">高数 & 线代</a></li>
-                <li><a href="contact.html" title="Contact">联系我</a></li>
+                <li><a href="/blog/category?cid=1" title="web development">web开发</a></li>
+                <li><a href="/blog/category?cid=2" title="computer science">408综合</a></li>
+                <li><a href="/blog/category?cid=3" title="higher mathematics & linear algebra">高数 & 线代</a></li>
+
             </ul>
         </nav>
 
         <!-- nav -->
 
     </div>
-
 </header>
+
 
 <!-- header -->
 
@@ -112,374 +95,42 @@
 
 
 
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
 
-            <article role="pge-title-content" class="blog-header">
-
-                <header>
-
-                    <h2><span>News</span> Updates from studio</h2>
-
-                </header>
-
-                <p>Get all information about our studio from latest news posts & updates page.</p>
-
-            </article>
-
+        <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
             <ul class="grid-lod effect-2" id="grid">
-
-                <li>
-
-                    <section class="blog-content">
-
-                        <a href="blog-details.html">
-
-                            <figure>
-
-                                <div class="post-date">
-
-                                    <span>24</span> July 2016
-
-                                </div>
-
-                                <img src="images/blog-images/blog-2.jpg" alt="" class="img-responsive"/>
-
-                            </figure>
-
-                        </a>
-
-                        <article>
-
-                            This is a sample news post title content or sample post heading.
-
-                        </article>
-
-                    </section>
-
-                </li>
-
-                <li>
-
-                    <section class="blog-content">
-
-                        <a href="blog-details.html">
-
-                            <figure>
-
-                                <div class="post-date">
-
-                                    <span>24</span> July 2016
-
-                                </div>
-
-                                <img src="images/blog-images/blog-4.jpg" alt="" class="img-responsive"/>
-
-                            </figure>
-
-                        </a>
-
-                        <article>
-
-                            This is a sample news post title content or sample post heading.
-
-                        </article>
-
-                    </section>
-
-                </li>
-
-                <li>
-
-                    <section class="blog-content">
-
-                        <a href="blog-details.html">
-
-                            <figure>
-
-                                <div class="post-date">
-
-                                    <span>24</span> July 2016
-
-                                </div>
-
-                                <img src="images/blog-images/blog-2.jpg" alt="" class="img-responsive"/>
-
-                            </figure>
-
-                        </a>
-
-                        <article>
-
-                            This is a sample news post title content or sample post heading.
-
-                        </article>
-
-                    </section>
-
-                </li>
-
-                <li>
-
-                    <section class="blog-content">
-
-                        <a href="blog-details.html">
-
-                            <figure>
-
-                                <div class="post-date">
-
-                                    <span>24</span> July 2016
-
-                                </div>
-
-                                <img src="images/blog-images/blog-4.jpg" alt="" class="img-responsive"/>
-
-                            </figure>
-
-                        </a>
-
-                        <article>
-
-                            This is a sample news post title content or sample post heading.
-
-                        </article>
-
-                    </section>
-
-                </li>
-
-                <li>
-
-                    <section class="blog-content">
-
-                        <a href="blog-details.html">
-
-                            <figure>
-
-                                <div class="post-date">
-
-                                    <span>24</span> July 2016
-
-                                </div>
-
-                                <img src="images/blog-images/blog-2.jpg" alt="" class="img-responsive"/>
-
-                            </figure>
-
-                        </a>
-
-                        <article>
-
-                            This is a sample news post title content or sample post heading.
-
-                        </article>
-
-                    </section>
-
-                </li>
+                <c:forEach items="${bloglist1}" var="blog1">
+                    <li>
+                        <figure class="effect-oscar"> <img src="${blog1.imageurl}" alt="" class="img-responsive"/>
+                            <figcaption>
+                                <h2>${blog1.title} </h2>
+
+                                <p>${blog1.summary}</p>
+                                <h4><span>${blog1.publishtime}</span></h4>
+                                <a href="/blog/getBlogByid?bid=${blog1.bid}">View more</a> </figcaption>
+                        </figure>
+                    </li>
+                </c:forEach>
 
             </ul>
-
-        </div>
-
+        </section>
 
 
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
+        <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
             <ul class="grid-lod effect-2" id="grid">
-
-                <li>
-
-                    <section class="blog-content">
-
-                        <a href="blog-details.html">
-
-                            <figure>
-
-                                <div class="post-date">
-
-                                    <span>24</span> July 2016
-
-                                </div>
-
-                                <img src="images/blog-images/blog-1.jpg" alt="" class="img-responsive"/>
-
-                            </figure>
-
-                        </a>
-
-                        <article>
-
-                            This is a sample news post title content or sample post heading.
-
-                        </article>
-
-                    </section>
-
-                </li>
-
-                <li>
-
-                    <section class="blog-content">
-
-                        <a href="blog-details.html">
-
-                            <figure>
-
-                                <div class="post-date">
-
-                                    <span>24</span> July 2016
-
-                                </div>
-
-                                <img src="images/blog-images/blog-3.jpg" alt="" class="img-responsive"/>
-
-                            </figure>
-
-                        </a>
-
-                        <article>
-
-                            This is a sample news post title content or sample post heading.
-
-                        </article>
-
-                    </section>
-
-                </li>
-
-                <li>
-
-                    <section class="blog-content">
-
-                        <a href="blog-details.html">
-
-                            <figure>
-
-                                <div class="post-date">
-
-                                    <span>24</span> July 2016
-
-                                </div>
-
-                                <img src="images/blog-images/blog-5.jpg" alt="" class="img-responsive"/>
-
-                            </figure>
-
-                        </a>
-
-                        <article>
-
-                            This is a sample news post title content or sample post heading.
-
-                        </article>
-
-                    </section>
-
-                </li>
-
-                <li>
-
-                    <section class="blog-content">
-
-                        <a href="blog-details.html">
-
-                            <figure>
-
-                                <div class="post-date">
-
-                                    <span>24</span> July 2016
-
-                                </div>
-
-                                <img src="images/blog-images/blog-1.jpg" alt="" class="img-responsive"/>
-
-                            </figure>
-
-                        </a>
-
-                        <article>
-
-                            This is a sample news post title content or sample post heading.
-
-                        </article>
-
-                    </section>
-
-                </li>
-
-                <li>
-
-                    <section class="blog-content">
-
-                        <a href="blog-details.html">
-
-                            <figure>
-
-                                <div class="post-date">
-
-                                    <span>24</span> July 2016
-
-                                </div>
-
-                                <img src="images/blog-images/blog-3.jpg" alt="" class="img-responsive"/>
-
-                            </figure>
-
-                        </a>
-
-                        <article>
-
-                            This is a sample news post title content or sample post heading.
-
-                        </article>
-
-                    </section>
-
-                </li>
-
-                <li>
-
-                    <section class="blog-content">
-
-                        <a href="blog-details.html">
-
-                            <figure>
-
-                                <div class="post-date">
-
-                                    <span>24</span> July 2016
-
-                                </div>
-
-                                <img src="images/blog-images/blog-5.jpg" alt="" class="img-responsive"/>
-
-                            </figure>
-
-                        </a>
-
-                        <article>
-
-                            This is a sample news post title content or sample post heading.
-
-                        </article>
-
-                    </section>
-
-                </li>
-
+                <c:forEach items="${bloglist2}" var="blog2">
+                    <li>
+                        <figure class="effect-oscar"> <img src="${blog2.imageurl}" alt="" class="img-responsive"/>
+                            <figcaption>
+                                <h2>${blog2.title} </h2>
+
+                                <p>${blog2.summary}</p>
+                                <h4><span>${blog2.publishtime}</span></h4>
+                                <a href="/blog/getBlogByid?bid=${blog2.bid}">View more</a> </figcaption>
+                        </figure>
+                    </li>
+                </c:forEach>
             </ul>
-
-        </div>
-
-
-
-
-
-
-
-
-
+        </section>
 
 
 
@@ -498,7 +149,7 @@
 
     <h1>
 
-        <a href="index.html" title="Physe Blog"><img src="/resources/images/favicon2.ico" title="Physe" alt="Physe"/></a>
+        <a href="/blog/index" title="Physe Blog"><img src="/resources/images/favicon-large.ico" title="Physe" alt="Physe"/></a>
 
     </h1>
 
@@ -509,30 +160,18 @@
     <nav role="footer-nav">
 
         <ul>
-            <li class="nav-active"><a href="index.html" title="Work">首页</a></li>
+            <li class="nav-active"><a href="/blog/index" title="Work">首页</a></li>
             <li><a href="about.html" title="About">关于</a></li>
-            <li><a href="webDevelopment.html" title="web development">web开发</a></li>
-            <li><a href="408.html" title="computer science">408综合</a></li>
-            <li><a href="mathematics.html" title="higher mathematics & linear algebra">高数 & 线代</a></li>
-            <li><a href="contact.html" title="Contact">联系我</a></li>
+            <li><a href="/blog/category?cid=1" title="web development">web开发</a></li>
+            <li><a href="/blog/category?cid=2" title="computer science">408综合</a></li>
+            <li><a href="/blog/category?cid=3" title="higher mathematics & linear algebra">高数 & 线代</a></li>
         </ul>
     </nav>
 
     <!-- nav -->
 
-    <ul role="social-icons">
 
-        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-
-        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-
-        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-
-        <li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
-
-    </ul>
-
-    <p class="copy-right">&copy; 2015  avana LLC.. All rights Resved</p>
+    <p class="copy-right">physe</p>
 
 </footer>
 

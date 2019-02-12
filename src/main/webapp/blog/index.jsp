@@ -23,21 +23,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>『 Physe Blog 』</title>
-    <link rel="shortcut icon" href="/avana/images/favicon2.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/resources/images/favicon2.ico" type="image/x-icon">
 
     <!-- style -->
 
-    <link href="/avana/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/resources/css/style.css" rel="stylesheet" type="text/css">
 
     <!-- style -->
 
     <!-- bootstrap -->
 
-    <link href="/avana/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <!-- responsive -->
 
-    <link href="/avana/css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="/resources/css/responsive.css" rel="stylesheet" type="text/css">
 
     <!-- font-awesome -->
 
@@ -45,9 +45,9 @@
 
     <!-- font-awesome -->
 
-    <link href="/avana/css/effects/set2.css" rel="stylesheet" type="text/css">
-    <link href="/avana/css/effects/normalize.css" rel="stylesheet" type="text/css">
-    <link href="/avana/css/effects/component.css"  rel="stylesheet" type="text/css" >
+    <link href="/resources/css/effects/set2.css" rel="stylesheet" type="text/css">
+    <link href="/resources/css/effects/normalize.css" rel="stylesheet" type="text/css">
+    <link href="/resources/css/effects/component.css"  rel="stylesheet" type="text/css" >
 </head>
 
 <body>
@@ -59,7 +59,7 @@
 
         <!-- logo -->
 
-        <h1> <a href="index.html" title="Physe"><img src="/avana/images/favicon-large.ico" title="Physe" alt="Physe"/></a> </h1>
+        <h1> <a href="index.html" title="Physe"><img src="/resources/images/favicon-large.ico" title="Physe" alt="Physe"/></a> </h1>
 
         <!-- logo -->
 
@@ -68,12 +68,12 @@
 
         <nav role="header-nav" class="navy">
             <ul>
-                <li class="nav-active"><a href="index.html" title="Work">首页</a></li>
+                <li class="nav-active"><a href="/blog/index" title="Work">首页</a></li>
                 <li><a href="about.html" title="About">关于</a></li>
                 <li><a href="/blog/category?cid=1" title="web development">web开发</a></li>
                 <li><a href="/blog/category?cid=2" title="computer science">408综合</a></li>
                 <li><a href="/blog/category?cid=3" title="higher mathematics & linear algebra">高数 & 线代</a></li>
-                <li><a href="contact.html" title="Contact">联系我</a></li>
+
             </ul>
         </nav>
 
@@ -158,22 +158,16 @@
 
     <nav role="footer-nav">
         <ul>
-            <li><a href="index.html" title="Work">首页</a></li>
+            <li><a href="/blog/index" title="Work">首页</a></li>
             <li><a href="about.html" title="About">关于</a></li>
-            <li><a href="blog.html" title="Blog">Blog</a></li>
-            <li><a href="contact.html" title="Contact">联系我</a></li>
+            <li><a href="/blog/index" title="Blog">Blog</a></li>
         </ul>
     </nav>
 
     <!-- nav -->
 
-    <ul role="social-icons">
-        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
-    </ul>
-    <p class="copy-right">&copy; 2015  avana LLC.. All rights Resved</p>
+
+    <p class="copy-right">physe</p>
 </footer>
 
 <!-- footer -->

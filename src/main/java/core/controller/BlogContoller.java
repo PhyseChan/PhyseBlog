@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -52,8 +53,18 @@ public class BlogContoller {
         String cidStirng=request.getParameter("cid");
         Integer cid=Integer.parseInt(cidStirng);
         List<Blog> bloglist=blogService.getBlogByCategory(cid);
-        mav.addObject("bloglist",bloglist);
-        mav.setViewName("/blog/search.jsp");
+        List<Blog> bloglist1=new ArrayList<Blog>();
+        List<Blog> bloglist2=new ArrayList<Blog>();
+        for(int i=0;i<bloglist.size();i++){
+            if(i%2==0){
+                bloglist1.add(bloglist.get(i));
+            }else{
+                bloglist2.add(bloglist.get(i));
+            }
+        }
+        mav.addObject("bloglist1",bloglist1);
+        mav.addObject("bloglist2",bloglist2);
+        mav.setViewName("/blog/blog.jsp");
         return mav;
     }
 }

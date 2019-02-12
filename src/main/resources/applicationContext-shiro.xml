@@ -35,9 +35,9 @@
     <!-- Shiro Filter -->
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager" />
-        <property name="loginUrl" value="/blog/index.html" />
-        <property name="successUrl" value="/blog/index.html" />
-        <property name="unauthorizedUrl" value="/blog/index.html" />
+        <property name="loginUrl" value="/blog/login" />
+        <property name="successUrl" value="/blog/index" />
+        <property name="unauthorizedUrl" value="/blog/index" />
         <property name="filterChainDefinitions">
             <value>
                 /blog/** = anon
@@ -49,6 +49,7 @@
                 /resources/jQuery-spqh/css/** = anon
                 /admin/** = authc
                 /** = authc
+                /update/** = anon
             </value>
         </property>
     </bean>

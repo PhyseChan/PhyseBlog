@@ -6,16 +6,16 @@
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
     <%@ page contentType="text/html;charset=utf-8"%>
-    <link rel="stylesheet" href="/resources/css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/bootstrap-grid.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/bootstrap-reboot.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/css/bootstrap-grid.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/css/bootstrap-reboot.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/core.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/font-awesome.min.css">
     <link rel="stylesheet" href="/resources/css/AdminLTE.min.css">
     <link rel="stylesheet" href="/resources/css/font.css" type="text/css">
 
     <script type="text/javascript" src="/resources/js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="/resources/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/js/bootstrap.js" type="text/css">
     <script type="text/javascript" src="/resources/js/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="/resources/js/core.js"></script>
 

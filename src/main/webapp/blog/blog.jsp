@@ -90,7 +90,7 @@
                 <li><a href="webDevelopment.html" title="web development">web开发</a></li>
                 <li><a href="408.html" title="computer science">408综合</a></li>
                 <li><a href="mathematics.html" title="higher mathematics & linear algebra">高数 & 线代</a></li>
-                <li><a href="contact.html" title="Contact">联系我</a></li>
+
             </ul>
         </nav>
 
@@ -175,36 +175,18 @@
     <!-- nav -->
 
     <nav role="footer-nav">
-
         <ul>
-
-            <li><a href="index.html" title="Work">Work</a></li>
-
-            <li><a href="about.html" title="About">About</a></li>
-
-            <li><a href="blog.html" title="Blog">Blog</a></li>
-
-            <li><a href="contact.html" title="Contact">Contact</a></li>
-
+            <li><a href="/blog/index" title="Work">首页</a></li>
+            <li><a href="about.html" title="About">关于</a></li>
+            <li><a href="/blog/index" title="Blog">Blog</a></li>
         </ul>
-
     </nav>
 
     <!-- nav -->
 
-    <ul role="social-icons">
 
-        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 
-        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-
-        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-
-        <li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
-
-    </ul>
-
-    <p class="copy-right">&copy; 2015  avana LLC.. All rights Resved</p>
+    <p class="copy-right">physe</p>
 
 </footer>
 

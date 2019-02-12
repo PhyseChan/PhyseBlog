@@ -59,6 +59,7 @@
 
     <link href="/resources/css/effects/component.css"  rel="stylesheet" type="text/css" >
     <link href="/resources/css/physestyle.css"  rel="stylesheet" type="text/css" >
+    <script type="text/javascript" src="/resources/wangEditor/release/wangEditor.min.js"></script>
 </head>
 
 
@@ -86,19 +87,14 @@
         <!-- nav -->
 
         <nav role="header-nav" class="navy">
-
             <ul>
-
-                <li><a href="index.html" title="Work">Work</a></li>
-
-                <li><a href="about.html" title="About">About</a></li>
-
-                <li class="nav-active"><a href="blog.html" title="Blog">Blog</a></li>
-
-                <li><a href="contact.html" title="Contact">Contact</a></li>
+                <li class="nav-active"><a href="index.html" title="Work">首页</a></li>
+                <li><a href="about.html" title="About">关于</a></li>
+                <li><a href="/blog/category?cid=1" title="web development">web开发</a></li>
+                <li><a href="/blog/category?cid=2" title="computer science">408综合</a></li>
+                <li><a href="/blog/category?cid=3" title="higher mathematics & linear algebra">高数 & 线代</a></li>
 
             </ul>
-
         </nav>
 
         <!-- nav -->
@@ -317,19 +313,11 @@
     <!-- nav -->
 
     <nav role="footer-nav">
-
         <ul>
-
-            <li><a href="index.html" title="Work">Work</a></li>
-
-            <li><a href="about.html" title="About">About</a></li>
-
-            <li><a href="blog.html" title="Blog">Blog</a></li>
-
-            <li><a href="contact.html" title="Contact">Contact</a></li>
-
+            <li><a href="/blog/index" title="Work">首页</a></li>
+            <li><a href="about.html" title="About">关于</a></li>
+            <li><a href="/blog/index" title="Blog">Blog</a></li>
         </ul>
-
     </nav>
 
     <!-- nav -->
@@ -346,7 +334,7 @@
 
     </ul>
 
-    <p class="copy-right">&copy; 2015  avana LLC.. All rights Resved</p>
+    <p class="copy-right">physe</p>
 
 </footer>
 

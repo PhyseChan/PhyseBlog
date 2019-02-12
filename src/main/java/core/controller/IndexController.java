@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -30,8 +31,17 @@ public class IndexController {
         }else{
             page=Integer.parseInt(pageString);
         }
-        List<Blog> bloglist1=blogService.getBlogByPage(page,5);
-        List<Blog> bloglist2=blogService.getBlogByPage(2,5);
+        List<Blog> bloglist=blogService.getBlogByPage(page,5);
+        List<Blog> bloglist1=new ArrayList<Blog>();
+        List<Blog> bloglist2=new ArrayList<Blog>();
+        for(int i=0;i<bloglist.size();i++){
+            if(i%2==0){
+                System.out.println("------------------------->"+i);
+                bloglist1.add(bloglist.get(i));
+            }else{
+                bloglist2.add(bloglist.get(i));
+            }
+        }
         mav.addObject("bloglist1",bloglist1);
         mav.addObject("bloglist2",bloglist2);
         mav.addObject("page",page);
