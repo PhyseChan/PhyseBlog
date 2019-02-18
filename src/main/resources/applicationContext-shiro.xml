@@ -35,12 +35,13 @@
     <!-- Shiro Filter -->
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager" />
-        <property name="loginUrl" value="/blog/login" />
+        <property name="loginUrl" value="/blog/index" />
         <property name="successUrl" value="/blog/index" />
         <property name="unauthorizedUrl" value="/blog/index" />
         <property name="filterChainDefinitions">
             <value>
                 /blog/** = anon
+                /update/** = anon
                 /resources/** = anon
                 /resources/wangEditor/** = anon
                 /avana/** = anon
@@ -49,7 +50,6 @@
                 /resources/jQuery-spqh/css/** = anon
                 /admin/** = authc
                 /** = authc
-                /update/** = anon
             </value>
         </property>
     </bean>
