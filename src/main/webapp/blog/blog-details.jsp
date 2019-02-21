@@ -29,6 +29,8 @@
 
     <title>Physe Blog</title>
 
+    <script src="/resources/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/resources/js/bootstrap.min.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="/resources/images/favicon.ico" type="image/x-icon">
 
 
@@ -58,8 +60,9 @@
     <link href="/resources/css/effects/normalize.css" rel="stylesheet" type="text/css">
 
     <link href="/resources/css/effects/component.css"  rel="stylesheet" type="text/css" >
-    <link href="/resources/css/physestyle.css"  rel="stylesheet" type="text/css" >
-    <script type="text/javascript" src="/resources/wangEditor/release/wangEditor.min.js"></script>
+<%--    <link href="/resources/css/physestyle.css"  rel="stylesheet" type="text/css" >--%>
+
+    <link rel="stylesheet" href="/resources/wangEditor/release/wangEditor.css" type="text/css">
 </head>
 
 
@@ -78,7 +81,7 @@
 
         <h1>
 
-            <a href="index.html" title="Phsye Blog"><img src="/resources/images/favicon-large.ico" title="Physe" alt="Physe"/></a>
+            <a href="index.html" title="Phsye Blog"><img src="/resources/images/favicon-large.png" title="Physe" alt="Physe"/></a>
 
         </h1>
 
@@ -322,17 +325,7 @@
 
     <!-- nav -->
 
-    <ul role="social-icons">
 
-        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-
-        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-
-        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-
-        <li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
-
-    </ul>
 
     <p class="copy-right">physe</p>
 
@@ -344,7 +337,6 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-<script src="/resources/js/jquery.min.js" type="text/javascript"></script>
 
 <!-- custom -->
 
@@ -354,7 +346,7 @@
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 
-<script src="/resources/js/bootstrap.min.js" type="text/javascript"></script>
+
 
 <script src="/resources/js/effects/masonry.pkgd.min.js"  type="text/javascript"></script>
 
@@ -369,7 +361,7 @@
 <!-- jquery.countdown -->
 
 <script src="/resources/js/html5shiv.js" type="text/javascript"></script>
-
+<script type="text/javascript" src="/resources/wangEditor/release/wangEditor.js"></script>
 </body>
 
 </html>

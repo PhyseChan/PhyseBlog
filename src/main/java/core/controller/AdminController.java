@@ -24,12 +24,6 @@ public class AdminController {
     Map insertBlog(@RequestBody Blog blog, HttpServletRequest request){
         System.out.println(blog.getTitle());
         System.out.println(blog.getSummary());
-//        String title=request.getParameter("title");
-//        String summary=request.getParameter("summary");
-//        String context=request.getParameter("context");
-//        blog.setTitle(title);
-//        blog.setSummary(summary);
-//        blog.setContext(context);
         java.sql.Date t=new java.sql.Date(new Date().getTime());
         blog.setPublishtime(t);
         Boolean flag=userService.insertBlog(blog);

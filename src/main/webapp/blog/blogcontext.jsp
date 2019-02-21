@@ -25,8 +25,7 @@
     <script type="text/javascript" src="/resources/js/core.js"></script>
     <script type="text/javascript" src="/resources/garand-sticky/jquerysticky.js"></script>
     <script type="text/javascript" src="/resources/js/myajax.js"></script>
-    <link href="/resources/buttonAction/css/demo-page.css" rel="stylesheet" media="all">
-    <link href="/resources/buttonAction/css/hover.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="/resources/wangEditor/release/wangEditor.css" type="text/css">
 </head>
 <body>
 <script>

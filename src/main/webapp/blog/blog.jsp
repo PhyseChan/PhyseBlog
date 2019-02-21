@@ -12,24 +12,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
     <meta charset="utf-8">
 
     <!-- Description, Keywords and Author -->
 
     <meta name="description" content="">
-
     <meta name="author" content="">
-
-
-
-    <title>:: avana LLC | Blog ::</title>
-
+    <title>『 Physe Blog 』</title>
     <link rel="shortcut icon" href="/resources/images/favicon2.ico" type="image/x-icon">
-
-
 
     <!-- style -->
 
@@ -47,16 +38,13 @@
 
     <!-- font-awesome -->
 
-    <link href="/resources/css/fonts.css" rel="stylesheet" type="text/css">
-
     <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
 
     <!-- font-awesome -->
 
+    <link href="/resources/css/effects/set2.css" rel="stylesheet" type="text/css">
     <link href="/resources/css/effects/normalize.css" rel="stylesheet" type="text/css">
-
     <link href="/resources/css/effects/component.css"  rel="stylesheet" type="text/css" >
-
 </head>
 
 
@@ -75,7 +63,7 @@
 
         <h1>
 
-            <a href="index.html" title="avana LLC"><img src="/resources/images/favicon-large.ico" title="avana LLC" alt="avana LLC"/></a>
+            <a href="index.html" title="avana LLC"><img src="/resources/images/favicon-large.png" title="avana LLC" alt="avana LLC"/></a>
 
         </h1>
 
@@ -85,11 +73,11 @@
 
         <nav role="header-nav" class="navy">
             <ul>
-                <li class="nav-active"><a href="index.html" title="Work">首页</a></li>
+                <li class="nav-active"><a href="/blog/index" title="Work">首页</a></li>
                 <li><a href="about.html" title="About">关于</a></li>
-                <li><a href="webDevelopment.html" title="web development">web开发</a></li>
-                <li><a href="408.html" title="computer science">408综合</a></li>
-                <li><a href="mathematics.html" title="higher mathematics & linear algebra">高数 & 线代</a></li>
+                <li><a href="/blog/category?cid=1" title="web development">web开发</a></li>
+                <li><a href="/blog/category?cid=2" title="computer science">408综合</a></li>
+                <li><a href="/blog/category?cid=3" title="higher mathematics & linear algebra">高数 & 线代</a></li>
 
             </ul>
         </nav>
@@ -122,7 +110,7 @@
 
                                 <p>${blog1.summary}</p>
                                 <h4><span>${blog1.publishtime}</span></h4>
-                                <a href="works-details.html">View more</a> </figcaption>
+                                <a href="/blog/getBlogByid?bid=${blog1.bid}">View more</a> </figcaption>
                         </figure>
                     </li>
                 </c:forEach>
@@ -141,7 +129,7 @@
 
                                 <p>${blog2.summary}</p>
                                 <h4><span>${blog2.publishtime}</span></h4>
-                                <a href="works-details.html">View more</a> </figcaption>
+                                <a href="/blog/getBlogByid?bid=${blog2.bid}">View more</a> </figcaption>
                         </figure>
                     </li>
                 </c:forEach>

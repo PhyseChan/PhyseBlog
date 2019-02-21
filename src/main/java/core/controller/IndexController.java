@@ -31,7 +31,7 @@ public class IndexController {
         }else{
             page=Integer.parseInt(pageString);
         }
-        List<Blog> bloglist=blogService.getBlogByPage(page,5);
+        List<Blog> bloglist=blogService.getBlogByPage(page,10);
         List<Blog> bloglist1=new ArrayList<Blog>();
         List<Blog> bloglist2=new ArrayList<Blog>();
         for(int i=0;i<bloglist.size();i++){

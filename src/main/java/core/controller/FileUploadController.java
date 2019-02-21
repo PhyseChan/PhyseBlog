@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import core.bean.WangEditor;
+import core.fileupload.qiniuUtil;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.FileUploadException;
@@ -52,6 +53,7 @@ public class FileUploadController {
     private static final String DEFAULT_SUB_FOLDER_FORMAT_AUTO = "yyyyMMdd";
     //这里扩充一下格式，防止手动建立的不统一
     private static final String DEFAULT_SUB_FOLDER_FORMAT_NO_AUTO = "yyyy-MM-dd";
+    private  String LastFilePath="";
 
     @RequestMapping(method = RequestMethod.GET)
     public void processUpload(ModelMap modelMap, HttpServletRequest request,
@@ -143,11 +145,14 @@ public class FileUploadController {
                 // 组装返回url，以便于ckeditor定位图片
                 fileUrl = FOR_RESOURCES_LOAD_DIR + FILE_UPLOAD_DIR + FILE_UPLOAD_SUB_IMG_DIR + "/" + folder.getName() + "/" + newfile.getName();
                 fileUrl = StringUtils.replace(fileUrl, "//", "/");
-                fileUrl = request.getContextPath() + fileUrl;
+                LastFilePath=newfile.getPath();
 
             }
             String[] urls=new String[2];
-            urls[1]=fileUrl;
+            String filepath="http://pn3n2301v.bkt.clouddn.com/";
+            filepath=filepath+uploadToQiniuyun(LastFilePath);
+            deleteFile(LastFilePath);
+            urls[1]=filepath;
             WangEditor wangEditor=new WangEditor();
             wangEditor.setErrno(0);
             wangEditor.setData(urls);
@@ -320,5 +325,17 @@ public class FileUploadController {
             return null;
         }
         return file;
+    }
+    /**
+     * 临时添加：
+     * 先上传到本地，再上传到七牛云，最后删除本地，代码有待重构
+     */
+    private String uploadToQiniuyun(String path){
+        qiniuUtil q=new qiniuUtil();
+        return q.upload(path);
+    }
+    private void deleteFile(String path){
+        File f=new File(path);
+        f.delete();
     }
 }

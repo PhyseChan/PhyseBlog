@@ -82,7 +82,7 @@
     from blog
   </select>
   <select id="selectBlogBypage" resultMap="selectByPage">
-    select *
+    select b.bid,b.summary,b.title,b.hits,b.publishtime,b.imageurl,c.typename
     from blog b
     LEFT JOIN category c on b.categoryid=c.cid order BY b.publishtime desc
   </select>

@@ -67,4 +67,20 @@ public class BlogContoller {
         mav.setViewName("/blog/blog.jsp");
         return mav;
     }
+
+    @RequestMapping(value = "/admin/getBlogInfoList" ,produces = "application/json;charset=UTF-8")
+    public ModelAndView BlogInfoList(HttpServletRequest request){
+        ModelAndView mav=new ModelAndView();
+        int page;
+        String pageString=request.getParameter("page");
+        if(pageString==null){
+            page=1;
+        }else {
+         page=Integer.parseInt(pageString);
+        }
+        List<Blog> bloglist=blogService.getBlogByPage(page,10);
+        mav.addObject("bloglist",bloglist);
+        mav.setViewName("admin/blog-list.jsp");
+        return mav;
+    }
 }

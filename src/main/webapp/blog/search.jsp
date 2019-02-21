@@ -59,7 +59,7 @@
 
         <!-- logo -->
 
-        <h1> <a href="index.html" title="Physe"><img src="/resources/images/favicon-large.ico" title="Physe" alt="Physe"/></a> </h1>
+        <h1> <a href="index.html" title="Physe"><img src="/resources/images/favicon-large.png" title="Physe" alt="Physe"/></a> </h1>
 
         <!-- logo -->
 
@@ -149,7 +149,7 @@
 
     <h1>
 
-        <a href="/blog/index" title="Physe Blog"><img src="/resources/images/favicon-large.ico" title="Physe" alt="Physe"/></a>
+        <a href="/blog/index" title="Physe Blog"><img src="/resources/images/favicon-large.png" title="Physe" alt="Physe"/></a>
 
     </h1>
 

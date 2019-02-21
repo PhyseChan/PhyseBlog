@@ -59,7 +59,7 @@
 
         <!-- logo -->
 
-        <h1> <a href="index.html" title="Physe"><img src="/resources/images/favicon-large.ico" title="Physe" alt="Physe"/></a> </h1>
+        <h1> <a href="index.html" title="Physe"><img src="/resources/images/favicon-large.png" title="Physe" alt="Physe"/></a> </h1>
 
         <!-- logo -->
 
@@ -105,13 +105,14 @@
         <!--</figure>-->
         <!--</section>-->
         <div class="clearfix"></div>
-        <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
+        <section class="col-sm-2 col-md-2 col-lg-2 grid"> </section>
+        <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 grid">
             <ul class="grid-lod effect-2" id="grid">
                 <c:forEach items="${bloglist1}" var="blog1">
                     <li>
                         <figure class="effect-oscar"> <img src="${blog1.imageurl}" alt="" class="img-responsive"/>
                             <figcaption>
-                                <h2>${blog1.title} </h2>
+                                <h4>${blog1.title} </h4>
 
                                 <p>${blog1.summary}</p>
                                 <h4><span>${blog1.publishtime}</span></h4>
@@ -122,13 +123,15 @@
 
             </ul>
         </section>
-        <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
+
+
+        <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 grid">
             <ul class="grid-lod effect-2" id="grid">
             <c:forEach items="${bloglist2}" var="blog2">
                 <li>
                     <figure class="effect-oscar"> <img src="${blog2.imageurl}" alt="" class="img-responsive"/>
                         <figcaption>
-                            <h2>${blog2.title} </h2>
+                            <h4>${blog2.title} </h4>
 
                             <p>${blog2.summary}</p>
                             <h4><span>${blog2.publishtime}</span></h4>
@@ -138,6 +141,7 @@
             </c:forEach>
             </ul>
         </section>
+        <section class="col-sm-2 col-md-2 col-lg-2 grid"> </section>
         <div class="clearfix"></div>
     </div>
 </main>
@@ -150,7 +154,7 @@
 
     <!-- logo -->
 
-    <h1> <a href="/blog/index" title="Physe Blog"><img src="/resources/images/favicon-large.ico" title="Physe" alt="Physe"/></a> </h1>
+    <h1> <a href="/blog/index" title="Physe Blog"><img src="/resources/images/favicon-large.png" title="Physe" alt="Physe"/></a> </h1>
 
     <!-- logo -->
 

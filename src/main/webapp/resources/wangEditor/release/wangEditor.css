@@ -360,6 +360,7 @@
 .w-e-text pre {
   margin: 10px 0;
   line-height: 1.5;
+
 }
 .w-e-text ul,
 .w-e-text ol {
@@ -378,10 +379,11 @@
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  background-color: #f1f1f1;
+  background-color: #1f1f1f;
   border-radius: 3px;
   padding: 3px 5px;
   margin: 0 3px;
+  color: #FFFFFF;
 }
 .w-e-text pre code {
   display: block;
@@ -405,6 +407,8 @@
 }
 .w-e-text img {
   cursor: pointer;
+  dispaly:table-ceil;
+  margin: auto;
 }
 .w-e-text img:hover {
   box-shadow: 0 0 5px #333;
