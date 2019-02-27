@@ -33,11 +33,7 @@
 
         <!--<table schema="blog" tableName="user" enableCountByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false"/>-->
-        <table schema="blog" tableName="blog" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table schema="blog" tableName="admin" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table schema="blog" tableName="category" enableCountByExample="false" enableDeleteByExample="false"
+        <table schema="blog" tableName="user" enableCountByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false"/>
 
     </context>

@@ -1,6 +1,7 @@
 package core.controller;
 
 import core.bean.Blog;
+import core.bean.BlogVo;
 import core.service.serviceImpl.BlogServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,42 +20,48 @@ import java.util.List;
 public class BlogContoller {
     @Autowired
     BlogServiceImpl blogService;
+
+
     @RequestMapping(value = "/blog/getBlogBypage",produces = "application/json;charset=UTF-8",method = RequestMethod.POST)
     public @ResponseBody
     String getBlogByPage( HttpServletRequest request , @RequestBody int page){
-        blogService.getBlogByPage(page,5);
+        blogService.getBlogBypage(page,5);
         return "success";
     }
 
+    /**
+     * 通过id获取博客信息
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/blog/getBlogByid")
     public @ResponseBody
     ModelAndView getBlogByid(HttpServletRequest request){
         ModelAndView mav=new ModelAndView();
         String idstring=request.getParameter("bid");
         Integer bid=Integer.parseInt(idstring);
-        Blog blog=blogService.selectBlogById(bid);
+        BlogVo blog=blogService.getBlogByPK(bid);
         mav.addObject("blog",blog);
         mav.setViewName("/blog/blog-details.jsp");
         return mav;
     }
 
-    @RequestMapping(value = "/blog/getBlogByid2",produces = "application/json;charset=UTF-8")
-    public @ResponseBody
-    String getBlogByid2(@RequestBody Blog blog, Model model){
-        blog=blogService.selectBlogById(blog.getBid());
-        model.addAttribute("blog",blog);
-        return "";
-    }
 
-    @RequestMapping(value = "/blog/category" , produces = "application/json;charset=UTF-8")
+
+
+    /**
+     * 博客模糊查询
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/blog/getBlogByKeyword" , produces = "application/json;charset=UTF-8")
     public @ResponseBody
-    ModelAndView getBlogByCategory (HttpServletRequest request){
+    ModelAndView getBlogByKeyword (HttpServletRequest request){
         ModelAndView mav=new ModelAndView();
-        String cidStirng=request.getParameter("cid");
-        Integer cid=Integer.parseInt(cidStirng);
-        List<Blog> bloglist=blogService.getBlogByCategory(cid);
-        List<Blog> bloglist1=new ArrayList<Blog>();
-        List<Blog> bloglist2=new ArrayList<Blog>();
+        String keyword=request.getParameter("keyword");
+        List<BlogVo> bloglist=blogService.getBlogInfoByKeyword(keyword);
+        List<BlogVo> bloglist1=new ArrayList<BlogVo>();
+        List<BlogVo> bloglist2=new ArrayList<BlogVo>();
         for(int i=0;i<bloglist.size();i++){
             if(i%2==0){
                 bloglist1.add(bloglist.get(i));
@@ -68,19 +75,6 @@ public class BlogContoller {
         return mav;
     }
 
-    @RequestMapping(value = "/admin/getBlogInfoList" ,produces = "application/json;charset=UTF-8")
-    public ModelAndView BlogInfoList(HttpServletRequest request){
-        ModelAndView mav=new ModelAndView();
-        int page;
-        String pageString=request.getParameter("page");
-        if(pageString==null){
-            page=1;
-        }else {
-         page=Integer.parseInt(pageString);
-        }
-        List<Blog> bloglist=blogService.getBlogByPage(page,10);
-        mav.addObject("bloglist",bloglist);
-        mav.setViewName("admin/blog-list.jsp");
-        return mav;
-    }
+
+
 }

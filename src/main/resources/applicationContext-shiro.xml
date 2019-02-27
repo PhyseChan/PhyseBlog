@@ -41,13 +41,9 @@
         <property name="filterChainDefinitions">
             <value>
                 /blog/** = anon
-                /update/** = anon
                 /resources/** = anon
                 /resources/wangEditor/** = anon
                 /avana/** = anon
-                /resources/VerticalTimeline/** =anon
-                /resources/jQuery-spqh/js/** = anon
-                /resources/jQuery-spqh/css/** = anon
                 /admin/** = authc
                 /** = authc
             </value>

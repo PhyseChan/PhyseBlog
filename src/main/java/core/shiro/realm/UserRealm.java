@@ -1,7 +1,7 @@
 package core.shiro.realm;
 
-import core.bean.Admin;
-import core.dao.AdminMapper;
+import core.bean.User;
+import core.dao.UserMapper;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class UserRealm extends AuthorizingRealm {
     @Autowired
-    AdminMapper adminMapper;
+    UserMapper userMapper;
 
     @Override
     public String getName() {
@@ -29,11 +29,11 @@ public class UserRealm extends AuthorizingRealm {
 
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         String username=(String)authenticationToken.getPrincipal();
-        Admin user=adminMapper.getUserByName(username);
+        User user=userMapper.getUserByName(username);
         if(user== null){
             return null;
         }
-        SimpleAuthenticationInfo info=new SimpleAuthenticationInfo(user,user.getAdminpassword(),getName());
+        SimpleAuthenticationInfo info=new SimpleAuthenticationInfo(user,user.getUserpassword(),getName());
         return info;
     }
 }

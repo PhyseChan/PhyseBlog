@@ -21,22 +21,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="/resources/images/favicon2.ico" type="image/x-icon" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="/resources/css/x-admin.css" media="all">
+    <link rel="stylesheet" href="/resources/css/font.css">
+    <link rel="stylesheet" href="/resources/css/xadmin.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/resources/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/resources/js/xadmin.js"></script>
 </head>
 <body>
 <div class="x-nav">
-            <span class="layui-breadcrumb">
-              <a><cite>首页</cite></a>
-              <a><cite>会员管理</cite></a>
-              <a><cite>意见列表</cite></a>
-            </span>
-    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
+
 </div>
 <div class="x-body">
-    <xblock><button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button><span class="x-right" style="line-height:40px">共有数据：88 条</span></xblock>
+    <xblock><button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="iconfont">&#xe640;</i>批量删除</button><span class="x-right" style="line-height:40px"></span></xblock>
     <table class="layui-table">
         <thead>
         <tr>
@@ -44,25 +40,23 @@
                 <input type="checkbox" name="" value="">
             </th>
             <th>
-                反馈编号ID
+                博客
             </th>
             <th>
-                反馈者
+                标题
             </th>
             <th>
-                反馈类型
+                点击量
+            </th>
+
+            <th>
+                发布时间
             </th>
             <th>
-                反馈邮箱
+                修改
             </th>
             <th>
-                反馈时间
-            </th>
-            <th>
-                状态
-            </th>
-            <th>
-                操作
+                删除
             </th>
         </tr>
         </thead>
@@ -76,30 +70,26 @@
                     ${blog.bid}
                 </td>
                 <td>
-                    ${blog.title}
+                    <a href="/blog/getBlogByid?bid=${blog.bid}">${blog.title}</a>>
                 </td>
                 <td >
-                    商品建议
+                    ${blog.hits}
                 </td>
-                <td >
-                   ${blog.category}
-                </td>
+
                 <td >
                     ${blog.publishtime}
                 </td>
-                <td >
-                            <span class="layui-btn layui-btn-normal layui-btn-mini">
-                                已浏览
-                            </span>
-                </td>
-                <td class="td-manage">
-                    <a title="处理" href="javascript:;" onclick="feedback_edit('处理','feedback-edit.html','4','','510')"
+                <td class="td-manage" style="width: 40px">
+                    <a title="处理" href="/admin/getupdateblog?bid=${blog.bid}"
                        class="ml-5" style="text-decoration:none">
-                        <i class="layui-icon">&#xe642;</i>
+                        <i class="iconfont">&#xe69e;</i>
                     </a>
-                    <a title="删除" href="javascript:;" onclick="feedback_del(this,'1')"
+
+                </td>
+                <td style="width: 40px">
+                    <a title="删除" href="/admin/deleteBlog?bid=${blog.bid}" onclick="feedback_del(this,'1')"
                        style="text-decoration:none">
-                        <i class="layui-icon">&#xe640;</i>
+                        <i class="iconfont">&#xe69a;</i>
                     </a>
                 </td>
             </tr>
@@ -111,7 +101,7 @@
     <div id="page"></div>
 </div>
 <script src="/resources/js/layui.js" charset="utf-8"></script>
-<script src="/resources/js/x-admin.js"></script>
+<script type="text/javascript" src="/resources/js/xadmin.js"></script>
 <script>
     layui.use(['element','laypage','layer','form'], function(){
         $ = layui.jquery;//jquery

@@ -4,49 +4,29 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.Date;
 
+
 @Repository("Blog")
 public class Blog {
 
-    private int bid;
+    private Integer bid;
 
     private String title;
 
     private String summary;
 
-    private Integer categoryid;
-
     private Integer hits;
-
-    private String context;
-
-    private Category category;
-
-    private String imageurl;
-
-    public String getimageurl() {
-        return imageurl;
-    }
-
-    public void setimageurl(String imageurl) {
-        this.imageurl = imageurl;
-    }
-
-    public Date getPublishtime() {
-        return publishtime;
-    }
-
-    public void setPublishtime(Date publishtime) {
-        this.publishtime = publishtime;
-    }
 
     private Date publishtime;
 
+    private String imageurl;
 
-    public int getBid() {
+    private String context;
+
+    public Integer getBid() {
         return bid;
     }
 
-    public void setBid(int bid) {
+    public void setBid(Integer bid) {
         this.bid = bid;
     }
 
@@ -66,20 +46,28 @@ public class Blog {
         this.summary = summary;
     }
 
-    public Integer getCategoryid() {
-        return categoryid;
-    }
-
-    public void setCategoryid(Integer categoryid) {
-        this.categoryid = categoryid;
-    }
-
     public Integer getHits() {
         return hits;
     }
 
     public void setHits(Integer hits) {
         this.hits = hits;
+    }
+
+    public Date getPublishtime() {
+        return publishtime;
+    }
+
+    public void setPublishtime(Date publishtime) {
+        this.publishtime = publishtime;
+    }
+
+    public String getImageurl() {
+        return imageurl;
+    }
+
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
     }
 
     public String getContext() {
@@ -89,14 +77,4 @@ public class Blog {
     public void setContext(String context) {
         this.context = context;
     }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
-
 }

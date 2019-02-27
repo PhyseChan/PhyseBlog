@@ -19,21 +19,11 @@ public class UserController {
         String pwd=request.getParameter("password");
         boolean flag=userService.login(name,pwd);
         if (flag==true){
-            return "blog/index.html";
+            return "/admin/index.jsp";
         }else{
-            return "blog/login.html";
+            return "/blog/login.html";
         }
     }
 
-    @RequestMapping(value = "/blog/searchblog",produces = "application/json;charset=UTF-8")
-    public  String searchBlog(HttpServletRequest request){
-        return "";
-    }
-
-    @RequestMapping(value = "/blog/getBlog",produces = "application/json;charset=UTF-8")
-    public String getBlogById(HttpServletRequest request){
-        return "";
-
-    }
 
 }

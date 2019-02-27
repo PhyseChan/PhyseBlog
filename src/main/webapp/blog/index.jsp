@@ -11,191 +11,202 @@
 <%@ page isELIgnored="false" %>
 
 
-<!DOCTYPE HTML>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta charset="utf-8">
-
-    <!-- Description, Keywords and Author -->
-
+    <!-- META DATA -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>『 Physe Blog 』</title>
-    <link rel="shortcut icon" href="/resources/images/favicon2.ico" type="image/x-icon">
 
-    <!-- style -->
+    <title>Home</title>
 
-    <link href="/resources/css/style.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css"  type="text/css">
 
-    <!-- style -->
+    <!-- Owl Carousel Assets -->
+    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+    <!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
 
-    <!-- bootstrap -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/resources/css/style.css">
 
-    <link href="/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/resources/lib/font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
+    <!---<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>--->
 
-    <!-- responsive -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/resources/js/html5shiv.js"></script>
+    <script src="/resources/js/respond.min.js"></script>
+    <![endif]-->
 
-    <link href="/resources/css/responsive.css" rel="stylesheet" type="text/css">
-
-    <!-- font-awesome -->
-
-    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
-
-    <!-- font-awesome -->
-
-    <link href="/resources/css/effects/set2.css" rel="stylesheet" type="text/css">
-    <link href="/resources/css/effects/normalize.css" rel="stylesheet" type="text/css">
-    <link href="/resources/css/effects/component.css"  rel="stylesheet" type="text/css" >
 </head>
 
-<body>
+<body class="index-page">
 
-<!-- header -->
-
-<header role="header">
+<!-- /////////////////////////////////////////Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="index.html">Physe</a>
+        </div>
 
-        <!-- logo -->
-
-        <h1> <a href="index.html" title="Physe"><img src="/resources/images/favicon-large.png" title="Physe" alt="Physe"/></a> </h1>
-
-        <!-- logo -->
-
-        <!-- nav -->
-
-
-        <nav role="header-nav" class="navy">
-            <ul>
-                <li class="nav-active"><a href="/blog/index" title="Work">首页</a></li>
-                <li><a href="about.html" title="About">关于</a></li>
-                <li><a href="/blog/category?cid=1" title="web development">web开发</a></li>
-                <li><a href="/blog/category?cid=2" title="computer science">408综合</a></li>
-                <li><a href="/blog/category?cid=3" title="higher mathematics & linear algebra">高数 & 线代</a></li>
-
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="index.html">首页</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="archive.html">博客</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="single.html">关于</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="contact.html">联系我</a>
+                </li>
             </ul>
-        </nav>
-
-        <!-- nav -->
-
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
+    <!-- /.container-fluid -->
+</nav>
+<!-- Navigation -->
+<div style="height: 400px"></div>
+
+
+<header class="container">
+    <div class="site-branding">
+        <h1 class="site-title">
+            <a href="index.html">
+                <span>Physe</span>
+            </a>
+        </h1>
+        <h2 class="site-description">BLOG</h2>
+    </div>
+
 </header>
 
-<!-- header -->
+<!-- /////////////////////////////////////////Content -->
+<div id="page-content">
 
-<!-- main -->
+    <!-- ////////////Content Box 01 -->
+    <section class="box-content box-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <c:forEach items="${bloglist1}" var="blog1">
+                    <div class="box-item">
+                        <img src="${blog1.imageurl}" class="img-responsive"/>
+                        <div class="content">
+                            <h3>${blog1.title}</h3>
+                            <p>${blog1.summary}</p>
+                            <a href="/blog/getBlogByid?bid=${blog1.bid}">阅读</a>
 
-<main role="main-home-wrapper" class="container">
-    <div class="row">
-        <!--<section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">-->
-        <!--<article role="pge-title-content">-->
-        <!--<header>-->
-        <!--<h2><span>avana</span> A Brand new Agency.</h2>-->
-        <!--</header>-->
-        <!--<p>This is the story of Avana, a minimal Bootstrap template for creative agency.</p>-->
-        <!--</article>-->
-        <!--</section>-->
-        <!--<section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">-->
-        <!--<figure class="effect-oscar"> <img src="images/home-images/image-1.jpg" alt="" class="img-responsive"/>-->
-        <!--<figcaption>-->
-        <!--<h2>Eliana Dedda<span> Identity</span></h2>-->
-        <!--<p>Personal Brand Identity.</p>-->
-        <!--<a href="works-details.html">View more</a> </figcaption>-->
-        <!--</figure>-->
-        <!--</section>-->
-        <div class="clearfix"></div>
-        <section class="col-sm-2 col-md-2 col-lg-2 grid"> </section>
-        <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 grid">
-            <ul class="grid-lod effect-2" id="grid">
-                <c:forEach items="${bloglist1}" var="blog1">
-                    <li>
-                        <figure class="effect-oscar"> <img src="${blog1.imageurl}" alt="" class="img-responsive"/>
-                            <figcaption>
-                                <h4>${blog1.title} </h4>
+                            <br><br>
+                            <span>${blog1.publishtime}</span><br>
+                        </div>
+                    </div>
+                    </c:forEach>
 
-                                <p>${blog1.summary}</p>
-                                <h4><span>${blog1.publishtime}</span></h4>
-                                <a href="/blog/getBlogByid?bid=${blog1.bid}">View more</a> </figcaption>
-                        </figure>
-                    </li>
-                </c:forEach>
+                </div>
+                <div class="col-md-4 ">
+                    <c:forEach items="${bloglist2}" var="blog2">
+                        <div class="box-item">
+                            <img src="${blog2.imageurl}" class="img-responsive"/>
+                            <div class="content">
+                                <h3>${blog2.title}</h3>
+                                <p>${blog2.summary}</p>
+                                <a href="/blog/getBlogByid?bid=${blog2.bid}">阅读</a>
+                                <br><br>
+                                <span>${blog2.publishtime}</span><br>
+                            </div>
+                        </div>
+                    </c:forEach>
+                </div>
 
-            </ul>
-        </section>
+                <div class="col-md-3">
+                    <div class="box-item" style="">
+                        <%--<img src="images/5.jpg" class="img-responsive"/>--%>
+                        <div class="content">
+                            <h3>Choosing The Bridesmaids and Groomsmen</h3>
+                            <p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>
+                            <a href="single.html">Read More...</a>
+                            <br><br>
+                            <span>MAY 21, 2014 BY VAFPRESS</span><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
+<!-- FOOTER -->
+<footer>
+    <div class="wrap-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-footer col-md-7">
+                    <h2 class="footer-title">关于我</h2>
+                    <div class="textwidget">这是用来记录本人学习web开发的经验以及记录日常的博客网站。             Physe  2019.2.5</div>
+                </div>
+                <%--<div class="col-footer col-md-3 widget_recent_entries">
+                </div>
+                <div class="col-footer col-md-3">
+                </div>--%>
+                <div class="col-footer col-md-5">
+                    <h2 class="footer-title">分类标签</h2>
+                    <div class="footer-tags">
 
-        <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 grid">
-            <ul class="grid-lod effect-2" id="grid">
-            <c:forEach items="${bloglist2}" var="blog2">
-                <li>
-                    <figure class="effect-oscar"> <img src="${blog2.imageurl}" alt="" class="img-responsive"/>
-                        <figcaption>
-                            <h4>${blog2.title} </h4>
-
-                            <p>${blog2.summary}</p>
-                            <h4><span>${blog2.publishtime}</span></h4>
-                            <a href="/blog/getBlogByid?bid=${blog2.bid}">View more</a> </figcaption>
-                    </figure>
-                </li>
-            </c:forEach>
-            </ul>
-        </section>
-        <section class="col-sm-2 col-md-2 col-lg-2 grid"> </section>
-        <div class="clearfix"></div>
+                        <c:forEach items="${categorylist}" var="category">
+                            <a href="#">${category.typename}</a>
+                        </c:forEach>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</main>
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
 
-<!-- main -->
+                </div>
+                <div class="col-md-4">
 
-<!-- footer -->
+                </div>
+                <div class="col-md-4">
 
-<footer role="footer">
-
-    <!-- logo -->
-
-    <h1> <a href="/blog/index" title="Physe Blog"><img src="/resources/images/favicon-large.png" title="Physe" alt="Physe"/></a> </h1>
-
-    <!-- logo -->
-
-    <!-- nav -->
-
-    <nav role="footer-nav">
-        <ul>
-            <li><a href="/blog/index" title="Work">首页</a></li>
-            <li><a href="about.html" title="About">关于</a></li>
-            <li><a href="/blog/index" title="Blog">Blog</a></li>
-        </ul>
-    </nav>
-
-    <!-- nav -->
-
-
-    <p class="copy-right">physe</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
-<!-- footer -->
+<!-- jQuery -->
+<script type="text/javascript" src="/resources/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Custom Theme JavaScript -->
+<script src="/resources/js/agency.js"></script>
 
-<script src="/resources/js/jquery.min.js" type="text/javascript"></script>
+<!-- Plugin JavaScript -->
+<script src="/resources/js/jquery.easing.min.js"></script>
+<script src="/resources/js/classie.js"></script>
+<script src="/resources/js/cbpAnimatedHeader.js"></script>
 
-<!-- custom -->
-
-<script src="/resources/js/nav.js" type="text/javascript"></script>
-<script src="/resources/js/custom.js" type="text/javascript"></script>
-
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-
-<script src="/resources/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/resources/js/effects/masonry.pkgd.min.js"  type="text/javascript"></script>
-<script src="/resources/js/effects/imagesloaded.js"  type="text/javascript"></script>
-<script src="/resources/js/effects/classie.js"  type="text/javascript"></script>
-<script src="/resources/js/effects/AnimOnScroll.js"  type="text/javascript"></script>
-<script src="/resources/js/effects/modernizr.custom.js"></script>
-
-<!-- jquery.countdown -->
-
-<script src="/resources/js/html5shiv.js" type="text/javascript"></script>
 </body>
 </html>

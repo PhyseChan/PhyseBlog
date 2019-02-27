@@ -1,6 +1,10 @@
 package core.bean;
 import java.util.Arrays;
 
+/**
+ * 前端使用wangeditor作为富文本编辑器，由于富文本编辑器的要求返回[errno：data]形式的数据
+ * 为了方便特地建一个wangeditor类。
+ */
 public class WangEditor {
 
     private Integer errno; //错误代码，0 表示没有错误。

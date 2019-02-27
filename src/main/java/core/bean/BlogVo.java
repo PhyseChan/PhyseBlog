@@ -2,6 +2,14 @@ package core.bean;
 
 import org.springframework.stereotype.Repository;
 
+import java.sql.Date;
+import java.util.List;
+
+/**
+ * BlogVo类是用于显示博客信息，因此其中的属性是不包含context。
+ * 此外还再加上List<Category> 分类标签的list。
+ * 注意：Blog类中是没有分类标签的属性，因为是多对多的关系，blog和category有一个中间表作为分类记录。
+ */
 @Repository("BlogVo")
 public class BlogVo {
 
@@ -11,21 +19,34 @@ public class BlogVo {
 
     private String summary;
 
-    private Integer categoryid;
+    private List<Category> categorylist;
 
     private Integer hits;
 
-    private String typename;
+    private String context;
 
-    public Category getCategory() {
-        return category;
+    public void setCategorylist(List<Category> categorylist) {
+        this.categorylist = categorylist;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public Date getPublishtime() {
+        return publishtime;
     }
 
-    private Category category;
+    public void setPublishtime(Date publishtime) {
+        this.publishtime = publishtime;
+    }
+
+    public String getImageurl() {
+        return imageurl;
+    }
+
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
+    }
+
+    private Date publishtime;
+
 
     private String imageurl;
 
@@ -53,12 +74,8 @@ public class BlogVo {
         this.summary = summary;
     }
 
-    public Integer getCategoryid() {
-        return categoryid;
-    }
-
-    public void setCategoryid(Integer categoryid) {
-        this.categoryid = categoryid;
+    public List<Category> getCategorylist() {
+        return categorylist;
     }
 
     public Integer getHits() {
@@ -69,11 +86,11 @@ public class BlogVo {
         this.hits = hits;
     }
 
-    public String getTypename() {
-        return typename;
+    public String getContext() {
+        return context;
     }
 
-    public void setTypename(String typename) {
-        this.typename = typename;
+    public void setContext(String context) {
+        this.context = context;
     }
 }

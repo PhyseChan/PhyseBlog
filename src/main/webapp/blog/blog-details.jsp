@@ -9,359 +9,187 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page isELIgnored="false" %>
-<!DOCTYPE HTML>
-
 <html>
-
 <head>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-    <meta charset="utf-8">
-
-    <!-- Description, Keywords and Author -->
-
+    <!-- META DATA -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="">
-
     <meta name="author" content="">
 
+    <title></title>
 
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css"  type="text/css">
 
-    <title>Physe Blog</title>
+    <!-- Owl Carousel Assets -->
+    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+    <!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
 
-    <script src="/resources/js/jquery.min.js" type="text/javascript"></script>
-    <script src="/resources/js/bootstrap.min.js" type="text/javascript"></script>
-    <link rel="shortcut icon" href="/resources/images/favicon.ico" type="image/x-icon">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/resources/css/style.css">
 
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/resources/lib/font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
+    <!---<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>--->
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/resources/js/html5shiv.js"></script>
+    <script src="/resources/js/respond.min.js"></script>
+    <![endif]-->
 
-    <!-- style -->
-
-    <link href="/resources/css/style.css" rel="stylesheet" type="text/css">
-
-    <!-- style -->
-
-    <!-- bootstrap -->
-
-    <link href="/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-
-    <!-- responsive -->
-
-    <link href="/resources/css/responsive.css" rel="stylesheet" type="text/css">
-
-    <!-- font-awesome -->
-
-    <link href="/resources/css/fonts.css" rel="stylesheet" type="text/css">
-
-    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
-
-    <!-- font-awesome -->
-
-    <link href="/resources/css/effects/normalize.css" rel="stylesheet" type="text/css">
-
-    <link href="/resources/css/effects/component.css"  rel="stylesheet" type="text/css" >
-<%--    <link href="/resources/css/physestyle.css"  rel="stylesheet" type="text/css" >--%>
-
-    <link rel="stylesheet" href="/resources/wangEditor/release/wangEditor.css" type="text/css">
 </head>
 
-
-
-<body>
-
-
-
-<!-- header -->
-
-<header role="header">
-
+<body class="sub-page">
+<!-- /////////////////////////////////////////Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="index.html">JUSTICE</a>
+        </div>
 
-        <!-- logo -->
-
-        <h1>
-
-            <a href="index.html" title="Phsye Blog"><img src="/resources/images/favicon-large.png" title="Physe" alt="Physe"/></a>
-
-        </h1>
-
-        <!-- logo -->
-
-        <!-- nav -->
-
-        <nav role="header-nav" class="navy">
-            <ul>
-                <li class="nav-active"><a href="index.html" title="Work">首页</a></li>
-                <li><a href="about.html" title="About">关于</a></li>
-                <li><a href="/blog/category?cid=1" title="web development">web开发</a></li>
-                <li><a href="/blog/category?cid=2" title="computer science">408综合</a></li>
-                <li><a href="/blog/category?cid=3" title="higher mathematics & linear algebra">高数 & 线代</a></li>
-
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="archive.html">Blog</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="single.html">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="contact.html">Contact</a>
+                </li>
             </ul>
-        </nav>
-
-        <!-- nav -->
-
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
+    <!-- /.container-fluid -->
+</nav>
+<!-- Navigation -->
 
+<!-- Background Gradients-->
+<div  class="site-gradients">
+    <div class="site-gradients-media">
+        <figure>
+            <img src="Another%20Yosemite%20short%20movie%20project%20%E2%80%93%20Modern_files/PcLGXNjMTdiFVKTrElCl__DSC2245.jpg" alt="PcLGXNjMTdiFVKTrElCl__DSC2245" srcset="https://themedemos.webmandesign.eu/modern/wp-content/uploads/sites/8/2014/11/PcLGXNjMTdiFVKTrElCl__DSC2245.jpg 1920w, https://themedemos.webmandesign.eu/modern/wp-content/uploads/sites/8/2014/11/PcLGXNjMTdiFVKTrElCl__DSC2245-420x280.jpg 420w, https://themedemos.webmandesign.eu/modern/wp-content/uploads/sites/8/2014/11/PcLGXNjMTdiFVKTrElCl__DSC2245-744x497.jpg 744w, https://themedemos.webmandesign.eu/modern/wp-content/uploads/sites/8/2014/11/PcLGXNjMTdiFVKTrElCl__DSC2245-1200x801.jpg 1200w" sizes="(max-width: 1617px) 100vw, 1617px" height="1080" width="1617">
+        </figure>
+    </div>
+</div>
+
+<header class="container">
+    <div class="site-branding">
+        <h1 class="site-title">
+            <a href="index.html">
+                <span>Justice</span>
+            </a>
+        </h1>
+        <h2 class="site-description">Welcome to Us !</h2>
+    </div>
+    <div class="social-links">
+        <ul class="list-inline">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+        </ul>
+    </div>
 </header>
 
-<!-- header -->
+<!-- /////////////////////////////////////////Content -->
+<div id="page-content" class="single-page">
+    <div class="container">
+        <div class="row">
+            <div id="main-content">
+                <article>
+                   <center><img src="${blog.imageurl}" /></center>
+                    <div class="art-content">
+                        <h1 style="text-align: center">${blog.title}</h1>
+                        <div class="info"style="text-align: center"><p>发布于 ${blog.publishtime}</p><p style="color: #2aabd2"><c:forEach items="${blog.categorylist}" var="categoryitem">
+                             ${categoryitem.typename}
+                        </c:forEach></p></div>
+                        <br>
+                        <br>
 
-<!-- main -->
-
-<main role="main-inner-wrapper" class="container">
-
-
-
-    <div class="blog-details">
-
-        <article class="post-details" id="post-details">
-
-            <header role="bog-header" class="bog-header text-center">
-                <h1>${blog.title}</h1>
-                <h5>${blog.publishtime}</h5>
-
-
-
-            </header>
-
-
-
-            <figure>
-
-                <img src="${blog.imageurl}" alt="" class="img-responsive"/>
-
-            </figure>
-
-
-
-            <div class="enter-content">
-
-
-                <p>${blog.context}</p>
+                        <br>
+                        <br>
+                        ${blog.context}
+                    </div>
+                </article>
 
             </div>
-
-        </article>
-
-
-
-        <!-- Comments -->
-
-        <%--<div class="comments-pan">
-
-            <h3>3 Comments</h3>
-
-            <ul class="comments-reply">
-
-                <li>
-
-                    <figure>
-
-                        <img src="images/blog-images/image-1.jpg" alt="" class="img-responsive"/>
-
-                    </figure>
-
-                    <section>
-
-                        <h4>Anna Greenfield      <a href="#">Reply</a></h4>
-
-                        <div class="date-pan">January 26, 2016</div>
-
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat eu nibh ultricies semper. Vivamus porta, felis vitae facilisis sodales, felis est iaculis orci, et ornare sem mauris ut turpis. Pellentesque vitae tortor nec tellus hendrerit aliquam. Donec condimentum leo eu ullamcorper scelerisque pellentesque urna rhoncus.
-
-                    </section>
-
-                    <ol class="reply-pan">
-
-                        <li>
-
-                            <figure>
-
-                                <img src="images/blog-images/image-2.jpg" alt="" class="img-responsive"/>
-
-                            </figure>
-
-                            <section>
-
-                                <h4>Johnathan Doe  <a href="#">Reply</a></h4>
-
-                                <div class="date-pan">January 26, 2016</div>
-
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat eu nibh ultricies semper. Vivamus porta, felis vitae facilisis sodales, felis est iaculis orci, et ornare sem mauris ut turpis. Pellentesque vitae tortor nec tellus hendrerit aliquam. Donec condimentum leo eu ullamcorper scelerisque pellentesque urna rhoncus.
-
-                            </section>
-
-                        </li>
-
-                    </ol>
-
-                </li>
-
-                <li>
-
-                    <figure>
-
-                        <img src="images/blog-images/image-3.jpg" alt="" class="img-responsive"/>
-
-                    </figure>
-
-                    <section>
-
-                        <h4>Anna Greenfield  <a href="#">Reply</a></h4>
-
-                        <div class="date-pan">January 26, 2016</div>
-
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat eu nibh ultricies semper. Vivamus porta, felis vitae facilisis sodales, felis est iaculis orci, et ornare sem mauris ut turpis. Pellentesque vitae tortor nec tellus hendrerit aliquam. Donec condimentum leo eu ullamcorper scelerisque pellentesque urna rhoncus.
-
-                    </section>
-
-
-
-                </li>
-
-            </ul>
-
-
-
-            <div class="commentys-form">
-
-                <h4>Leave a comment</h4>
-
-
-
-                <div class="row">
-
-                    <form action="" method="get">
-
-
-
-                        <div class="col-xs-12 col-sm-4 col-md-4">
-
-                            <input name="" type="text" placeholder="Whats your name *">
-
-                        </div>
-
-                        <div class="col-xs-12 col-sm-4 col-md-4">
-
-                            <input name="" type="email" placeholder="Whats your email *">
-
-                        </div>
-
-                        <div class="col-xs-12 col-sm-4 col-md-4">
-
-                            <input name="" type="url" placeholder="Runing a Website">
-
-                        </div>
-
-                        <div class="clearfix"></div>
-
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-
-                            <textarea name="" cols="" rows="" placeholder="Whats in your mind"></textarea>
-
-                        </div>
-
-                        <div class="text-center">
-
-                            <input name="" type="button" value="Post Comment">
-
-                        </div>
-
-
-
-
-
-                    </form>
-
-                </div>
-
-
-
-            </div>
-
-
-
-        </div>--%>
-
-
-
+        </div>
     </div>
 
+</div>
 
+<!-- FOOTER -->
+<footer>
+    <div class="wrap-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-footer col-md-7">
+                    <h2 class="footer-title">关于我</h2>
+                    <div class="textwidget">这是用来记录本人学习web开发的经验以及记录日常的博客网站。             Physe  2019.2.5</div>
+                </div>
+                <%--<div class="col-footer col-md-3 widget_recent_entries">
+                </div>
+                <div class="col-footer col-md-3">
+                </div>--%>
+                <div class="col-footer col-md-5">
+                    <h2 class="footer-title">分类标签</h2>
+                    <div class="footer-tags">
 
+                        <c:forEach items="${categorylist}" var="category">
+                            <a href="#">${category.typename}</a>
+                        </c:forEach>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
 
+                </div>
+                <div class="col-md-4">
 
+                </div>
+                <div class="col-md-4">
 
-
-</main>
-
-<!-- main -->
-
-<!-- footer -->
-
-<footer role="footer">
-
-    <!-- logo -->
-
-    <h1>
-
-        <a href="/blog/index" title="Physe Blog"><img src="/resources/images/favicon-large.ico" title="Physe" alt="Physe"/></a>
-
-    </h1>
-
-    <!-- logo -->
-
-    <!-- nav -->
-
-    <nav role="footer-nav">
-        <ul>
-            <li><a href="/blog/index" title="Work">首页</a></li>
-            <li><a href="about.html" title="About">关于</a></li>
-            <li><a href="/blog/index" title="Blog">Blog</a></li>
-        </ul>
-    </nav>
-
-    <!-- nav -->
-
-
-
-    <p class="copy-right">physe</p>
-
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
-<!-- footer -->
+<!-- jQuery -->
+<script type="text/javascript" src="/resources/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
 
+<!-- Custom Theme JavaScript -->
+<script src="/resources/js/agency.js"></script>
 
+<!-- Plugin JavaScript -->
+<script src="/resources/js/jquery.easing.min.js"></script>
+<script src="/resources/js/classie.js"></script>
+<script src="/resources/js/cbpAnimatedHeader.js"></script>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-
-
-<!-- custom -->
-
-<script src="/resources/js/nav.js" type="text/javascript"></script>
-
-<script src="/resources/js/custom.js" type="text/javascript"></script>
-
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-
-
-
-<script src="/resources/js/effects/masonry.pkgd.min.js"  type="text/javascript"></script>
-
-<script src="/resources/js/effects/imagesloaded.js"  type="text/javascript"></script>
-
-<script src="/resources/js/effects/classie.js"  type="text/javascript"></script>
-
-<script src="/resources/js/effects/AnimOnScroll.js"  type="text/javascript"></script>
-
-<script src="/resources/js/effects/modernizr.custom.js"></script>
-
-<!-- jquery.countdown -->
-
-<script src="/resources/js/html5shiv.js" type="text/javascript"></script>
-<script type="text/javascript" src="/resources/wangEditor/release/wangEditor.js"></script>
 </body>
-
 </html>

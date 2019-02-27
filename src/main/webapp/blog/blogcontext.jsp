@@ -12,19 +12,19 @@
 <head>
     <title>Title</title>
 
-    <link rel="stylesheet" href="/resources/css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/bootstrap-grid.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/bootstrap-reboot.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/core.css" type="text/css">
+
     <link rel="stylesheet" href="/resources/css/font-awesome.min.css">
     <link rel="stylesheet" href="/resources/css/font.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/style.css" type="text/css">
 
     <script type="text/javascript" src="/resources/js/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="/resources/js/bootstrap.js"></script>
     <script type="text/javascript" src="/resources/js/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="/resources/js/core.js"></script>
-    <script type="text/javascript" src="/resources/garand-sticky/jquerysticky.js"></script>
+
     <script type="text/javascript" src="/resources/js/myajax.js"></script>
+    <script type="text/javascript" src="/resources/js/tag.js"/>
+
     <link rel="stylesheet" href="/resources/wangEditor/release/wangEditor.css" type="text/css">
 </head>
 <body>
@@ -46,8 +46,18 @@
             <div class="list-right">
                 <div class="box-fixed "><div><a href="/blog/index">主页</a></div>分类<div><a href="#">类别1</a></div><div><a href="#">类别2</a></div></div>
             </div>
+
+            <h2>添加标签</h2>
+            <p>在下面输入框中输入标签值，并且回车，如果添加多个标签可用逗号：','或者'，'分开</p>
+            <input type="text" id="tagValue" > 输入后按回车
+
+
         </div>
     </section>
 </section>
+<script>
+    var tag = new Tag("tagValue");
+    tag.initView();
+</script>
 </body>
 </html>

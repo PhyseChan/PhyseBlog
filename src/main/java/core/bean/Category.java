@@ -4,7 +4,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository("Category")
 public class Category {
-
     private Integer cid;
 
     private String typename;

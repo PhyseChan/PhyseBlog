@@ -3,7 +3,6 @@ package core.service;
 import core.bean.Blog;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 @Service("AdminService")
 public interface AdminService {

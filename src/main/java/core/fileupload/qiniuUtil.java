@@ -8,28 +8,44 @@ import com.qiniu.storage.Configuration;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.storage.model.DefaultPutRet;
 import com.qiniu.util.Auth;
-import com.qiniu.util.StringMap;
 
-import java.io.File;
+import java.io.IOException;
+import java.util.Properties;
 
 public class qiniuUtil {
+    private String accessKey;
+    private String secretKey;
+    private String bucket;
+
+    /**
+     * 加载properties配置
+     */
+    public qiniuUtil(){
+        Properties properties=new Properties();
+        try {
+            properties.load(qiniuUtil.class.getResourceAsStream("qiniuConfig.properties"));
+            accessKey=properties.getProperty("accessKey");
+            secretKey=properties.getProperty("secretKey");
+            bucket=properties.getProperty("bucket");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 七牛云官方上传文件代码
+     * 此方法为服务器端上传到七牛云
+     * @param localFilePath
+     * @return
+     */
     public String upload(String localFilePath){
         //构造一个带指定Zone对象的配置类
         Configuration cfg = new Configuration(Zone.zone2());
         //...其他参数参考类注释
         UploadManager uploadManager = new UploadManager(cfg);
-        //...生成上传凭证，然后准备上传
-        String accessKey = "QvdbwLGYQJ76Dz9OhcEhYs8uTl_qDffh7RsDxVUo";
-        String secretKey = "PozVLrkBdKa5ZkYoAMGDcyzXU-XUvyVo-zVje1XH";
-        String bucket = "physe-image";
-        //如果是Windows情况下，格式是 D:\\qiniu\\test.png
-/*        String localFilePath = "/root/SSM/resources/upload/img/20190204/";*/
-        //默认不指定key的情况下，以文件内容的hash值作为文件名
         String key = null;
-
         Auth auth = Auth.create(accessKey, secretKey);
         String upToken = auth.uploadToken(bucket);
-
         try {
             Response response = uploadManager.put(localFilePath, key, upToken);
             //解析上传成功的结果
@@ -46,16 +62,4 @@ public class qiniuUtil {
         }
         return null;
     }
-    public void uploadallfile(String path){
-
-        File file = new File(path);
-        File[] fs = file.listFiles();
-        for(File f:fs){
-            if(!f.isDirectory())
-                upload(f.getPath());
-        }
-
-    }
-
-
 }
