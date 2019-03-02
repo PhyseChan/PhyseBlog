@@ -34,6 +34,7 @@
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="/resources/lib/font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
+    <link rel="stylesheet" href="/resources/css/font.css">
     <!---<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>--->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -68,10 +69,7 @@
                     <a class="page-scroll" href="index.html">首页</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="archive.html">博客</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="single.html">关于</a>
+                    <a class="page-scroll" href="#">博客</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="contact.html">联系我</a>
@@ -139,15 +137,48 @@
 
                 <div class="col-md-3">
                     <div class="box-item" style="">
-                        <%--<img src="images/5.jpg" class="img-responsive"/>--%>
-                        <div class="content">
-                            <h3>Choosing The Bridesmaids and Groomsmen</h3>
-                            <p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>
-                            <a href="single.html">Read More...</a>
+                        <img src="/resources/images/admin.jpg" class="img-responsive"/>
+                        <div style="background-color: #F6F6F6" class="content">
+                            <h2><b>博主信息</b></h2>
+                            <br>
+                            <p>考研数学爆炸决心找工作。但是荒废java一年,只能从零开始慢慢重新把java拾起QAQ</p>
+                            <br>
+                            <br>
+                            <a href="#">了解更多</a>
                             <br><br>
-                            <span>MAY 21, 2014 BY VAFPRESS</span><br>
+
                         </div>
                     </div>
+                    <div class="box-item" style="">
+                        <div style="background-color: #F6F6F6" class="content">
+                            <form action="/blog/getBlogByKeyword" method="get">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="搜索" name="keyword">
+                            </div>
+                            <button type="submit" class="btn btn-skin">提交</button></form>
+                            <br>
+                            <br>
+                            <div class="col-footer">
+                                <h2 class="footer-title">分类标签</h2>
+                                <div class="footer-tags" id="gettarget">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+
+                    <ul class="list-inline social-buttons">
+                        <b><h5 style="text-align: center;"><a style="color: #0aac8e" href="#">更多文章→</a></h5>></b>
+                    </ul>
+                </div>
+                <div class="col-md-4">
                 </div>
             </div>
         </div>
@@ -172,11 +203,12 @@
                     <div class="footer-tags">
 
                         <c:forEach items="${categorylist}" var="category">
-                            <a href="#">${category.typename}</a>
+                            <a href="/blog/category?typename=${category.typename}">${category.typename}</a>
                         </c:forEach>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <div class="bottom-footer">
@@ -207,6 +239,7 @@
 <script src="/resources/js/jquery.easing.min.js"></script>
 <script src="/resources/js/classie.js"></script>
 <script src="/resources/js/cbpAnimatedHeader.js"></script>
+<script src="/resources/js/frontjs.js"></script>
 
 </body>
 </html>

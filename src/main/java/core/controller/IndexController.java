@@ -21,6 +21,12 @@ public class IndexController {
     BlogServiceImpl blogService;
     @Autowired
     CategoryServiceImpl categoryService;
+
+    /**
+     * 初始化首页
+     * @param httpServletRequest
+     * @return
+     */
     @RequestMapping("/blog/index")
     public ModelAndView initIndex(HttpServletRequest httpServletRequest){
         String pageString=httpServletRequest.getParameter("page");
@@ -47,7 +53,7 @@ public class IndexController {
         mav.addObject("bloglist1",bloglist1);
         mav.addObject("bloglist2",bloglist2);
         mav.addObject("page",page);
-        mav.setViewName("blog/index.jsp");
+        mav.setViewName("/blog/index.jsp");
         return mav;
     }
 

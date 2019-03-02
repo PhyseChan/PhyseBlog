@@ -1,3 +1,4 @@
+
 function getblog() {
     var idval=document.getElementById("bid").value;
     var d={"bid":idval}
@@ -63,3 +64,4 @@ function updateblog() {
         }
     });
 }
+

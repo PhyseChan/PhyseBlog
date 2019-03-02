@@ -82,4 +82,5 @@
     select bid, title, summary, hits, publishtime, imageurl
     from blog
   </select>
+
 </mapper>

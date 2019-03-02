@@ -17,7 +17,13 @@
 
     <!-- 項目自定义的Realm -->
     <bean id="shiroDbRealm" class="core.shiro.realm.UserRealm">
-        <property name="cacheManager" ref="cacheManager" />
+        <property name="credentialsMatcher" >
+            <bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+                <property name="hashAlgorithmName" value="MD5"></property>
+                <property name="hashIterations" value="2"></property>
+            </bean>
+        </property>
+        <!--<property name="cacheManager" ref="cacheManager" />-->
     </bean>
     <aop:config proxy-target-class="true"></aop:config>
     <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
@@ -82,4 +88,5 @@
         <!--<property name="configLocation" value="classpath:shiro-ehcache.xml"/>-->
         <!--<property name="shared" value="true"/>-->
     <!--</bean>-->
+    
 </beans>

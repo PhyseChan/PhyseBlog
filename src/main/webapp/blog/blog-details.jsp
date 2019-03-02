@@ -55,23 +55,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="index.html">JUSTICE</a>
+            <a class="navbar-brand page-scroll" href="index.html">Physe</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="index.html">Home</a>
+                    <a class="page-scroll" href="index.html">首页</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="archive.html">Blog</a>
+                    <a class="page-scroll" href="#">博客</a>
                 </li>
+
                 <li>
-                    <a class="page-scroll" href="single.html">About</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="contact.html">Contact</a>
+                    <a class="page-scroll" href="contact.html">联系我</a>
                 </li>
             </ul>
         </div>
@@ -94,19 +92,10 @@
     <div class="site-branding">
         <h1 class="site-title">
             <a href="index.html">
-                <span>Justice</span>
+                <span>Physe</span>
             </a>
         </h1>
-        <h2 class="site-description">Welcome to Us !</h2>
-    </div>
-    <div class="social-links">
-        <ul class="list-inline">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-        </ul>
+        <h2 class="site-description">BLOG</h2>
     </div>
 </header>
 
@@ -129,6 +118,10 @@
                         <br>
                         ${blog.context}
                     </div>
+                    <p style="text-align: center ;font-weight: bold;"><a style="color: #0aac8e;" href="/blog/index">首页</a></p>
+                    <br>
+
+                    <br>
                 </article>
 
             </div>
@@ -155,7 +148,7 @@
                     <div class="footer-tags">
 
                         <c:forEach items="${categorylist}" var="category">
-                            <a href="#">${category.typename}</a>
+                            <a href="/blog/category?typename=${category.typename}">${category.typename}</a>
                         </c:forEach>
                     </div>
                 </div>

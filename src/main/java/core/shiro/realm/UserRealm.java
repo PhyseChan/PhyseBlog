@@ -2,13 +2,12 @@ package core.shiro.realm;
 
 import core.bean.User;
 import core.dao.UserMapper;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.AuthenticationInfo;
-import org.apache.shiro.authc.AuthenticationToken;
-import org.apache.shiro.authc.SimpleAuthenticationInfo;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class UserRealm extends AuthorizingRealm {
@@ -34,6 +33,8 @@ public class UserRealm extends AuthorizingRealm {
             return null;
         }
         SimpleAuthenticationInfo info=new SimpleAuthenticationInfo(user,user.getUserpassword(),getName());
+        info.setCredentialsSalt(ByteSource.Util.bytes("physechan"));
         return info;
     }
+
 }

@@ -27,4 +27,6 @@ public interface BlogMapper {
 
     List<BlogVo> selectBlogBypage();
 
+    List<BlogVo> selectBlogByCategory();
+
 }

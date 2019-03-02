@@ -96,4 +96,6 @@ public class BlogServiceImpl {
     public BlogVo getBlogByPK(int bid){
         return blogMapper.selectByPrimaryKey(bid);
     }
+
 }
+
