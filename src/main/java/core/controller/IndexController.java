@@ -48,8 +48,6 @@ public class IndexController {
                 bloglist2.add(bloglist.get(i));
             }
         }
-        List<Category> categories=categoryService.getCategorylist();
-        mav.addObject("categorylist",categories);
         mav.addObject("bloglist1",bloglist1);
         mav.addObject("bloglist2",bloglist2);
         mav.addObject("page",page);
